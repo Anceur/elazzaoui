@@ -122,87 +122,88 @@
 
 
 
-
   <div class="untree_co-section bg-light">
     <div class="container">
       <div class="row align-items-stretch">
-        <div class="col-lg-6 mb-4"  data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="media-h d-flex h-100">
             <figure>
-              <img src="images/img-school-4-min.jpg" alt="Image">
+              <img src="images/img-school-4-min.jpg" alt="صورة">
             </figure>
             <div class="media-h-body">
-              <h2 class="mb-3"><a href="#">Education for Tomorrow's Leaders</a></h2>
-              <div class="meta "><span class="icon-calendar mr-2"></span><span>June 22, 2020</span>  <span class="icon-person mr-2"></span>Untree.co</div>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="mb-3"><a href="#">التعليم لقادة الغد</a></h2>
+              <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span class="icon-person mr-2"></span>Untree.co</div>
+              <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 mb-4"  data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="media-h d-flex h-100">
             <figure>
-              <img src="images/img-school-3-min.jpg" alt="Image">
+              <img src="images/img-school-3-min.jpg" alt="صورة">
             </figure>
             <div class="media-h-body">
-              <h2 class="mb-3"><a href="#">Enroll Your Kids This Summer to get 30% off</a></h2>
-              <div class="meta "><span class="icon-calendar mr-2"></span><span>June 22, 2020</span>  <span class="icon-person mr-2"></span>Untree.co</div>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 mb-4"  data-aos="fade-up" data-aos-delay="100">
-          <div class="media-h d-flex h-100">
-            <figure>
-              <img src="images/img-school-2-min.jpg" alt="Image">
-            </figure>
-            <div class="media-h-body">
-              <h2 class="mb-3"><a href="#">Education for Tomorrow's Leaders</a></h2>
-              <div class="meta "><span class="icon-calendar mr-2"></span><span>June 22, 2020</span>  <span class="icon-person mr-2"></span>Untree.co</div>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 mb-4"  data-aos="fade-up" data-aos-delay="200">
-          <div class="media-h d-flex h-100">
-            <figure>
-              <img src="images/img-school-1-min.jpg" alt="Image">
-            </figure>
-            <div class="media-h-body">
-              <h2 class="mb-3"><a href="#">Enroll Your Kids This Summer to get 30% off</a></h2>
-              <div class="meta "><span class="icon-calendar mr-2"></span><span>June 22, 2020</span>  <span class="icon-person mr-2"></span>Untree.co</div>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="mb-3"><a href="#">سجّل أطفالك هذا الصيف واحصل على خصم 30%</a></h2>
+              <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span class="icon-person mr-2"></span>Untree.co</div>
+              <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
             </div>
           </div>
         </div>
 
-
-        <div class="col-lg-6 mb-4"  data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="media-h d-flex h-100">
             <figure>
-              <img src="images/img-school-5-min.jpg" alt="Image">
+              <img src="images/img-school-2-min.jpg" alt="صورة">
             </figure>
             <div class="media-h-body">
-              <h2 class="mb-3"><a href="#">Education for Tomorrow's Leaders</a></h2>
-              <div class="meta "><span class="icon-calendar mr-2"></span><span>June 22, 2020</span>  <span class="icon-person mr-2"></span>Untree.co</div>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="mb-3"><a href="#">التعليم لقادة الغد</a></h2>
+              <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span class="icon-person mr-2"></span>Untree.co</div>
+              <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 mb-4"  data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="media-h d-flex h-100">
             <figure>
-              <img src="images/img-school-6-min.jpg" alt="Image">
+              <img src="images/img-school-1-min.jpg" alt="صورة">
             </figure>
             <div class="media-h-body">
-              <h2 class="mb-3"><a href="#">Enroll Your Kids This Summer to get 30% off</a></h2>
-              <div class="meta "><span class="icon-calendar mr-2"></span><span>June 22, 2020</span>  <span class="icon-person mr-2"></span>Untree.co</div>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="mb-3"><a href="#">سجّل أطفالك هذا الصيف واحصل على خصم 30%</a></h2>
+              <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span class="icon-person mr-2"></span>Untree.co</div>
+              <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="media-h d-flex h-100">
+            <figure>
+              <img src="images/img-school-5-min.jpg" alt="صورة">
+            </figure>
+            <div class="media-h-body">
+              <h2 class="mb-3"><a href="#">التعليم لقادة الغد</a></h2>
+              <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span class="icon-person mr-2"></span>Untree.co</div>
+              <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="media-h d-flex h-100">
+            <figure>
+              <img src="images/img-school-6-min.jpg" alt="صورة">
+            </figure>
+            <div class="media-h-body">
+              <h2 class="mb-3"><a href="#">سجّل أطفالك هذا الصيف واحصل على خصم 30%</a></h2>
+              <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span class="icon-person mr-2"></span>Untree.co</div>
+              <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
             </div>
           </div>
         </div>
 
       </div>
+    </div>
+</div>
+
 
       <div class="row mt-5">
         <div class="col-12 text-center">

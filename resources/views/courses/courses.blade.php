@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>EL-Azzoui</title>
+  <title>مدرسة العزاوي</title>
 </head>
 
 <body>
