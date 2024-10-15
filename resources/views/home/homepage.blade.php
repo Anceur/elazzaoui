@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/homepage.css">
 
   <title>مدرسة العزاوي</title>
 </head>
@@ -616,7 +617,7 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-lg-3 mr-auto">
+        <div class="col-lg-3 footer">
           <div class="widget">
             <h3>معلومات عنا<span class="text-primary">.</span> </h3>
             <p>نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي والابتكار. نقدم برامج متنوعة تشمل المواد الأساسية والدورات الخاصة</p>
@@ -634,14 +635,14 @@
           </div> <!-- /.widget -->
         </div> <!-- /.col-lg-3 -->
 
-        <div class="maps" style="    margin-right: auto !important;">
+        <div class="col-lg-3 footer">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.8386418414375!2d1.0507685847580706!3d35.060773080343516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1280db04ca1fa525%3A0x171b9c190a2724f5!2zRWwgQXp6YW91aSBTY2hvb2wg2KfZhNi52LLYp9mI2Yog2LPZg9mI2YQ!5e0!3m2!1sar!2sdz!4v1728510404163!5m2!1sar!2sdz" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div> <!-- /.col-lg-3 -->
 
 
 
-        <div class="col-lg-3">
+        <div class="col-lg-3 contact">
           <div class="widget">
             <h3>اتصال</h3>
             <address>Rue Meskine Bachir, Frenda</address>
@@ -662,7 +663,6 @@
         </div>
       </div> <!-- /.container -->
     </div> <!-- /.site-footer -->
-
   
     <div id="overlayer"></div>
     <div class="loader">
