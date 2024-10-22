@@ -1,11 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-// المسار الرئيسي للصفحة الرئيسية
+// المسار الرئيسي للصفحة الرئيسية بدون تسجيل دخول
 Route::get('/', function () {
     return view('home.homepage');
-});
+})->name('homepage');
 
 // المسار لصفحة "حول"
 Route::get('/about', function () {
@@ -32,16 +33,25 @@ Route::get('/news', function () {
     return view('news.news');
 });
 
-// المسار لصفحة "فريق العمل"
 Route::get('/staff', function () {
     return view('staff.staff');
 });
-Route::get('/login', function () {
-    return view('auth.login.login');
-});
-Route::get('/register', function () {
-    return view('auth.register.register');
-});
+
 Route::get('/courses', function () {
     return view('courses.courses');
 });
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    // يمكن للمستخدمين المسجلين الدخول إلى الصفحة الشخصية أو لوحة القيادة
+    Route::get('/homepage', function () {
+        return view('home.homepage'); // يمكنك استبدالها بصفحة أخرى مثل الملف الشخصي
+    })->name('homepage');
+});
+
+
+route::get('/home',[HomeController::class,'index']);
