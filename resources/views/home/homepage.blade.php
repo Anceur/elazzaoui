@@ -233,7 +233,8 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="custom-media">
-            <a href="#"><img src="images/img-school-1-min.jpg" alt="Image" class="img-fluid"></a>
+            <a href="#"> <img src="{{ asset('images/img-school-1-min.jpg') }}" alt="Image" class="img-fluid">
+            </a>
             <div class="custom-media-body" style="text-align: right;">
               <div class="d-flex justify-content-between pb-3">
                 <div class="text-primary"><span class="uil uil-book-open"></span> <span>43 lesson</span></div>
@@ -360,7 +361,7 @@
         <div class="col-lg-6"  data-aos="fade-up" data-aos-delay="100">
           <div class="media-h d-flex h-100">
             <figure>
-              <img src="images/img-school-1-min.jpg" alt="Image">
+              <img src="{{ asset('images/img-school-1-min.jpg') }}" alt="Image">
             </figure>
             <div class="media-h-body" style="text-align: right">
               <h2 class="mb-3"><a href="#" >التعليم لقادة الغد</a></h2>

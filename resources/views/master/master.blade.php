@@ -15,17 +15,19 @@
 
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+  
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.bunny.net">
      <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -65,8 +67,8 @@
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
-          <a href="index.html" class="logo menu-absolute m-0">
-            <img src="images/logo1.png" alt="Logo" id="img-logo" style="width: 100px; margin-top: -24px; ">
+          <a href="{{url('/')}}" class="logo menu-absolute m-0">
+            <img src="{{ asset('images/logo1.png') }}" alt="Logo" id="img-logo" style="width: 100px; margin-top: -24px;">
           </a>
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
@@ -170,34 +172,35 @@
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+    <script src="{{ asset('js/aos.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
+    
 
   </body>
 
 
   <script>
     $(window).on('scroll', function() {
-      var $logo = $("#img-logo"); // Ensure your logo has this ID or class
+        var $logo = $("#img-logo"); // Ensure your logo has this ID
 
-      if ($(window).scrollTop() > 0) {
-          // When the user scrolls down, change the logo to logo1.png
-          $logo.attr('src', 'images/logo.png');
-      } else if ($(window).scrollTop() === 0) {
-          // When the user scrolls back up to the top, restore the original logo
-          $logo.attr('src', 'images/logo1.png');
-      }
+        if ($(window).scrollTop() > 0) {
+            // When the user scrolls down, change the logo to logo.png
+            $logo.attr('src', '{{ asset('images/logo.png') }}');
+        } else if ($(window).scrollTop() === 0) {
+            // When the user scrolls back up to the top, restore the original logo
+            $logo.attr('src', '{{ asset('images/logo1.png') }}');
+        }
     });
 </script>
+
  
 </body>
 </html>
