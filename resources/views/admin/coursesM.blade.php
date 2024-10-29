@@ -16,7 +16,7 @@
 
         <!-- Form لإضافة دورة جديدة -->
         <h2>Add New Course</h2>
-        <form action="{{ route('coursesM.store') }}" method="POST">
+        <form action="{{ route('coursesM.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="course_name">Course Name</label>

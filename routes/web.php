@@ -91,6 +91,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
 Route::get('/admin/courses', [CourseMController::class, 'index'])->name('coursesM');
+Route::get('/admin/courses/{id}/edit', [CourseMController::class, 'edit'])->name('coursesM.edit');
+Route::get('/admin/courses/create', [CourseMController::class, 'create'])->name('coursesM.create');
+Route::put('/admin/courses/{id}', [CourseMController::class, 'update'])->name('coursesM.update');
 Route::post('/admin/courses', [CourseMController::class, 'store'])->name('coursesM.store');
 Route::delete('/admin/courses/{id}', [CourseMController::class, 'destroy'])->name('coursesM.destroy');
 
