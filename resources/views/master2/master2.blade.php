@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,7 +13,8 @@
 
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 
   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
@@ -27,7 +26,10 @@
   <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
-  
+  <link rel="stylesheet" href="{{ asset('css/details.css') }}">
+
+
+
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.bunny.net">
      <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -54,7 +56,7 @@
 
 
   
-  <nav class="site-nav mb-5">
+  <nav class="site-nav mb-5" style="background-color: #136ad5; position:fixed;">
     <div class="pb-2 top-bar mb-3">
       <div class="container">
 
@@ -64,7 +66,7 @@
           
       </div>
     </div>
-    <div class="sticky-nav js-sticky-header">
+    <div class="sticky-nav" >
       <div class="container position-relative">
         <div class="site-navigation text-center">
           <a href="{{url('/')}}" class="logo menu-absolute m-0">
@@ -127,9 +129,9 @@
           <div class="widget">
             <h3>يتصل</h3>
             <ul class="list-unstyled social">
-              <li><a href="https://instagram.com/el_azzaoui_school"><span class="icon-instagram"></span></a></li>
+              <li><a href="#"><span class="icon-instagram"></span></a></li>
               <li><a href="#"><span class="icon-twitter"></span></a></li>
-              <li><a href="https://www.facebook.com/@ElAzzaouiSchool"><span class="icon-facebook"></span></a></li>
+              <li><a href="#"><span class="icon-facebook"></span></a></li>
               <li><a href="#"><span class="icon-linkedin"></span></a></li>
               <li><a href="#"><span class="icon-pinterest"></span></a></li>
               <li><a href="#"><span class="icon-dribbble"></span></a></li>
@@ -185,22 +187,6 @@
     
 
   </body>
-
-
-  <script>
-    $(window).on('scroll', function() {
-        var $logo = $("#img-logo"); // Ensure your logo has this ID
-
-        if ($(window).scrollTop() > 0) {
-            // When the user scrolls down, change the logo to logo.png
-            $logo.attr('src', '{{ asset('images/logo.png') }}');
-        } else if ($(window).scrollTop() === 0) {
-            // When the user scrolls back up to the top, restore the original logo
-            $logo.attr('src', '{{ asset('images/logo1.png') }}');
-        }
-    });
-</script>
-
  
 </body>
 </html>

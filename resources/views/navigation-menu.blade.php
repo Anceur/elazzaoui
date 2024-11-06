@@ -20,8 +20,8 @@
                                 {{ Auth::user()->name }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                            <x-dropdown-link href="{{ route('profile.show') }}" style="text-align: right">
+                                {{ __('حسابي') }}
                             </x-dropdown-link>
 
                             <div class="border-t border-gray-200"></div>
@@ -31,8 +31,8 @@
                                 @csrf
 
                                 <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
-                                    {{ __('Log Out') }}
+                                         @click.prevent="$root.submit();" style="text-align: right">
+                                    {{ __('تسجيل الخروج') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>

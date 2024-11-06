@@ -23,7 +23,7 @@
     <h2 class="text-center mb-4">قائمة الدورات</h2>
     <div class="row" style="flex-direction: column;">
         @foreach ($courses as $course)
-            <a href="{{ route('courses.details', $course->id) }}" class="course-item d-flex align-items-center mb-4 p-3 border" style="flex-direction: row-reverse; text-decoration: none; color: inherit;">
+            <a href="{{ route('courses.details', $course->id) }}" class="course-item d-flex align-items-center mb-4 p-3 border" style="flex-direction: row-reverse; text-decoration: none; color: inherit; width: 100%;">
                 <div class="vertical-bar"></div> <!-- الشريط العمودي الجديد -->
                 <div class="course-image ml-3">
                     @if($course->course_photo)
@@ -34,14 +34,21 @@
                 </div>
                 <div class="course-info flex-grow-1" style="text-align: right;">
                     <h5 class="course-title mb-1">{{ $course->course_name }}</h5>
+                    <div>
+                        <p>{{ $course->course_desc }}</p>
+                    </div>
                     <span class="badge badge-success">أفضل بيع</span>
+                    <div class="coures-deux" style="text-align: right;" >
                     <p class="course-details mb-0 text-muted">14 ساعات كاملة</p>
                     <p class="course-update-date mb-0 text-muted">تحديث: 11/2021</p>
+                    </div>
                 </div>
+          
+             
                 <div class="course-meta text-right">
-                    <p><i class="uil uil-users-alt"></i> {{ $course->enrollment_count }}</p>
                     <p class="course-price font-weight-bold">12,99 $US <del>59,99 $US</del></p>
-                    <span class="rating-value">{{ $course->rating }}</span> <i class="uil uil-star" style="color: #f5c518;"></i>
+                    <p><i class="uil uil-users-alt"> 200</i> {{ $course->enrollment_count }}</p>
+                    <span class="rating-value">{{ $course->rating }}</span> <i class="uil uil-star" style="color: #f5c518;">4.2</i>
                 </div>
             </a>
         @endforeach

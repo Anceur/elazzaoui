@@ -1,3 +1,4 @@
+@if(Auth::user()->usertype == 'admin')
 @extends('adminlte::page')
 
 @section('title', 'Manage Users')
@@ -72,3 +73,5 @@
 @section('js')
     <script> console.log("User management page loaded."); </script>
 @stop
+@endif
+

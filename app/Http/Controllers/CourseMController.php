@@ -29,26 +29,27 @@ class CourseMController extends Controller
             'course_name' => 'required|string|max:255',
             'course_teacher' => 'required|string|max:255',
             'course_price' => 'required|numeric',
+            'course_desc' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         // التحقق من رفع الملف وحفظه
-        if ($request->hasFile('course_photo')) {
-            $photoPath = $request->file('course_photo')->store('course_photos', 'public');
-        } else {
-            $photoPath = null;
-        }
+        $photoPath = $request->hasFile('course_photo')
+            ? $request->file('course_photo')->store('course_photos', 'public')
+            : null;
 
         // إنشاء دورة جديدة
         Course::create([
             'course_name' => $request->input('course_name'),
             'course_teacher' => $request->input('course_teacher'),
             'course_price' => $request->input('course_price'),
+            'course_desc' => $request->input('course_desc'),
             'course_photo' => $photoPath,
         ]);
 
         return redirect()->route('coursesM')->with('success', 'Course created successfully.');
     }
+
     // عرض صفحة تعديل الدورة
     public function edit($id)
     {
@@ -65,6 +66,7 @@ class CourseMController extends Controller
             'course_name' => 'required|string|max:255',
             'course_teacher' => 'required|string|max:255',
             'course_price' => 'required|numeric',
+            'course_desc' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -82,6 +84,7 @@ class CourseMController extends Controller
             'course_name' => $request->input('course_name'),
             'course_teacher' => $request->input('course_teacher'),
             'course_price' => $request->input('course_price'),
+            'course_desc' => $request->input('course_desc'),
             'course_photo' => $photoPath,
         ]);
 

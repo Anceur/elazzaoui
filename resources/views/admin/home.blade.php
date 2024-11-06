@@ -1,3 +1,4 @@
+@if(Auth::user()->usertype == 'admin')
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
@@ -89,3 +90,4 @@
 @section('js')
     <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
 @stop
+@endif

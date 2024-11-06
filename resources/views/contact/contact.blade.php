@@ -1,10 +1,3 @@
-<!-- /*
-* Template Name: Learner
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
- 
 
     
   
@@ -38,6 +31,70 @@
 
   </div> <!-- /.untree_co-hero -->
 
+  <div class="untree_co-section">
+    <div class="container">
 
+        <div class="row mb-5">
+            <div class="col-lg-4 mb-5 order-2 mb-lg-0">
+                <div class="contact-info">
+                    <div class="address mt-4">
+                        <i class="icon-room"></i>
+                        <h4 class="mb-2">الموقع:</h4>
+                        <p>910، لندن</p>
+                    </div>
+
+                    <div class="open-hours mt-4">
+                        <i class="icon-clock-o"></i>
+                        <h4 class="mb-2">ساعات العمل:</h4>
+                        <p>الأحد-الجمعة: 11:00 صباحًا - 11:00 مساءً</p>
+                    </div>
+
+                    <div class="email mt-4">
+                        <i class="icon-envelope"></i>
+                        <h4 class="mb-2">البريد الإلكتروني:</h4>
+                        <p>info@Untree.co</p>
+                    </div>
+
+                    <div class="phone mt-4">
+                        <i class="icon-phone"></i>
+                        <h4 class="mb-2">الاتصال:</h4>
+                        <p>+1 1234 55488 55</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 mr-auto order-1">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                <form action="{{ route('contact.send') }}" method="POST">
+                    @csrf
+                    <div class="row">
+                        <div class="col-6 mb-3" >
+                            <input style="text-align: right" type="text" class="form-control" name="name" placeholder="اسمك" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <input style="text-align: right" type="email" class="form-control" name="email" placeholder="بريدك الإلكتروني" required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input style="text-align: right" type="text" class="form-control" name="subject" placeholder="الموضوع" required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <textarea style="text-align: right" name="message" cols="30" rows="7" class="form-control" placeholder="الرسالة" required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <button style="text-align: right" type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
   @endsection
   

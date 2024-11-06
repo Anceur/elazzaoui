@@ -12,7 +12,8 @@ return new class extends Migration {
             $table->string('course_name');     // اسم الدورة
             $table->string('course_teacher');  // اسم المعلم
             $table->decimal('course_price', 8, 2); // ثمن الدورة
-            $table->string('employes_photo')->nullable();
+            $table->string('course_photo')->nullable();
+            $table->string('course_desc')->nullable();
             $table->timestamps();
         });
     }

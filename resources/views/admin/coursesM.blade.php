@@ -1,3 +1,4 @@
+@if(Auth::user()->usertype == 'admin')
 @extends('adminlte::page')
 
 @section('title', 'Manage Courses')
@@ -34,6 +35,10 @@
                 <label for="course_photo">Upload Photo</label>
                 <input type="file" class="form-control-file" id="course_photo" name="course_photo" accept="image/*">
             </div>
+            <div class="form-group">
+                <label for="course_desc">Course Description</label>
+                <textarea class="form-control" id="course_desc" name="course_desc" rows="3"></textarea>
+            </div>
             <button type="submit" class="btn btn-success">Create Course</button>
         </form>
 
@@ -46,6 +51,7 @@
                     <th>Teacher</th>
                     <th>Price</th>
                     <th>Actions</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,6 +60,7 @@
                         <td>{{ $course->course_name }}</td>
                         <td>{{ $course->course_teacher }}</td>
                         <td>{{ $course->course_price }}</td>
+                        <td>{{ $course->course_desc }}</td>
                         <td>
                             <form action="{{ route('coursesM.destroy', $course->id) }}" method="POST" style="display:inline;">
                                 @csrf
@@ -71,3 +78,6 @@
 @section('js')
     <script> console.log("Course management page loaded."); </script>
 @stop
+
+
+@endif

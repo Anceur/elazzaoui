@@ -9,6 +9,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Role;
+use TheHocineSaad\LaravelChargilyEPay\Traits\Epayable;
+use Spatie\Permission\Traits\HasRoles; // Add this line
 
 class User extends Authenticatable
 {
@@ -19,6 +22,8 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles; // Add this line
+    use Epayable;
 
     /**
      * The attributes that are mass assignable.
