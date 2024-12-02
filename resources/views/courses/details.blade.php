@@ -1,91 +1,163 @@
-@extends('master2.master2')
+
+
+@extends('master.master')
 
 @section('content')
 <div class="course-details-page">
-    <div class="container bg-1" style="padding: 15% 5%">
-        <div class="row">
-            <!-- Right Sidebar Section -->
-            <div class="course-sidebar col-lg-4" data-aos="fade-up">
-              <div class="course-preview">
-                  <a href="#" class="preview-video-link">
-                      <img src="{{ asset('images/img-school-4-min.jpg')}}" alt="Course Preview" class="img-fluid rounded">
-                      <span class="play-icon">▶</span>
-                  </a>
-              </div>
-              <div class="tab-container">
-                  <button class="tab-button active">Personal</button>
-                  <button class="tab-button">Teams</button>
-              </div>
-              <div class="pricing-section">
-                <p class="price">${{ $courses->course_price }}</p>
-                @if(Auth::check())
+    <div class="container bg-1" style="padding: 15% 5% 0% 5%">
+        <div class="row" style="display: flex; justify-content: flex-end;">
+            <!-- قسم الشريط الجانبي الأيمن -->
+            <div class="course-sidebar col-lg-4" data-aos="fade-up" id="sidebar">
+                <div class="course-preview">
+                    <a href="{{ asset('storage/' . $courses->course_video) }}" class="preview-video-link">
+                        <img src="{{ asset('storage/'. $courses->course_photo)}}" alt="معاينة الدورة" class="img-fluid rounded">
+                        <span class="play-icon">▶</span>
+                    </a>
+                </div>
+                
+                <div class="tab-container">
+                    <button class="tab-button active">شخصي</button>
+                    <button class="tab-button">فريق</button>
+                </div>
+                <div class="pricing-section">
+                    {{-- @if(Auth::check())
                     <!-- إذا كان المستخدم مسجلاً، توجيهه إلى صفحة الدفع -->
                     <a href="{{ url('payment') }}" class="btn btn-primary enroll-btn">Try Personal Plan for free</a>
                 @else
                     <!-- إذا كان المستخدم غير مسجل، توجيهه إلى صفحة التسجيل -->
                     <a href="{{ url('register') }}" class="btn btn-primary enroll-btn">Try Personal Plan for free</a>
-                @endif
-                <p class="price-details">Starting at €15.00 per month after trial</p>
+                @endif --}}
+                    <p class="price">${{ $courses->course_price }}</p>
+                    <a href="" class="btn-1 btn-primary enroll-btn">جرّب الخطة الشخصية مجانًا</a>
+                    <a href="{{ route('courses.playlist', $courses->id) }}">Go to Playlist</a>
+
+
+                    <p class="price-details">تبدأ من €15.00 شهريًا بعد الفترة التجريبية</p>
+                </div>
+                <div class="subscription-info">
+                    <p>احصل على هذه الدورة، بالإضافة إلى أكثر من 12,000 دورة عالية التقييم، مع الخطة الشخصية. <a href="#">اعرف المزيد</a></p>
+                </div>
             </div>
 
-            {{-- <div class="pricing-section">
-                <p class="price">${{ $course->price }}</p>
-                <a href="{{ route('create.invoice') }}" class="btn btn-primary enroll-btn">Try Personal Plan for Free</a>
-                <p class="price-details">Starting at €15.00 per month after trial</p>
-            </div>
-             --}}
-            
-              <div class="subscription-info">
-                  <p>Get this course, plus 12,000+ of our top-rated courses, with Personal Plan. <a href="#">Learn more</a></p>
-              </div>
-            </div>
-
-            <!-- Left Content Section -->
+            <!-- قسم المحتوى الأيسر -->
             <div class="col-lg-8 course-content">
                 <h1 class="course-title">{{ $courses->course_name }}</h1>
-                <p class="course-subtitle">{{ $courses->course_discription }}</p>
+                <p class="course-subtitle">{{ $courses->course_description }}</p>
                 <div class="course-rating">
-                    <span class="badge badge-success">Bestseller</span>
+                    <span class="badge badge-success">الأكثر مبيعًا</span>
                     <span class="rating">4.7</span>
                     <span class="star-rating">★★★★☆</span>
-                    <a href="#" class="ratings-count">(330,788 ratings)</a>
-                    <span class="students-count">1,414,171 students</span>
+                    <a href="#" class="ratings-count">(330,788 تقييم)</a>
+                    <span class="students-count">1,414,171 طالب</span>
                 </div>
-                <p class="course-author">Created by {{ $courses->course_teacher }}</p>
+                <p class="course-author">من إعداد {{ $courses->course_teacher }}</p>
+                
+                <!-- قسم "ما ستتعلمه" -->
+                <!-- تفاصيل الدورة -->
                 <div class="course-details">
-                  <span class="course-meta-item">
-                      <!-- SVG Icon for "Last Updated" -->
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
-                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm10.854 3.646a.5.5 0 0 0-.708 0L8 10.793 6.854 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708z"/>
-                      </svg>
-                      Last updated 10/2024
-                  </span> · 
-              
-                  <span class="course-meta-item">
-                      <!-- SVG Icon for "Language" -->
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
-                          <path d="M4.52 7h4.96c-.022.345-.076.68-.16 1H4.68a6.98 6.98 0 0 1-.16-1z"/>
-                          <path d="M0 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2V4zm1 2v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6H1z"/>
-                          <path d="M11.5 3a.5.5 0 0 0-.5-.5H6.18c.161-.258.313-.524.463-.797.04-.07.08-.141.122-.214a.5.5 0 1 0-.876-.478 10.143 10.143 0 0 1-.482.857 10.07 10.07 0 0 1-.478.86.5.5 0 1 0 .874.478c.042-.073.082-.144.122-.214.151-.273.302-.539.463-.797h4.83a.5.5 0 0 0 .5-.5z"/>
-                          <path d="M10.61 7.34c.03.07.06.14.089.21H5.299a6.982 6.982 0 0 1 .163-1h4.477c.021.036.042.073.064.109a9.072 9.072 0 0 0 .327.681z"/>
-                          <path d="M5.526 12.32a.5.5 0 1 0-.852-.514 7.04 7.04 0 0 1-.78 1.269c-.04.071-.08.142-.122.215a.5.5 0 0 0 .876.478c.042-.073.082-.144.122-.214.307-.518.563-.995.756-1.477z"/>
-                      </svg>
-                      English
-                  </span> · 
-              
-                  <span class="course-meta-item">
-                      <!-- SVG Icon for "Additional Languages" -->
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm1.464-1h2.39a12.056 12.056 0 0 1 0 2h-2.39A6.973 6.973 0 0 1 1 8c0-.34.028-.672.079-.997.128-.8.385-1.558.744-2.248A.546.546 0 0 1 2.348 5a13.03 13.03 0 0 1 .236-.241A11.96 11.96 0 0 1 8 2.304c.42 0 .834.03 1.242.085a8.14 8.14 0 0 1 1.242-.085 6.992 6.992 0 0 1 3.96 1.187 7.032 7.032 0 0 1-1.77 2.36 7.138 7.138 0 0 1-3.432 1.004H8.95l-.242.021a10.978 10.978 0 0 0-1.092 3.915 6.992 6.992 0 0 1-4.536-4.536zM3.5 5a12.062 12.062 0 0 0-.351 1h1.92a13.02 13.02 0 0 1-.056-.402C4.987 4.314 4.29 3.768 3.5 3.5V5zm9 .5a6.973 6.973 0 0 1 3.5 2.5c.092-.324.153-.66.193-.997.013-.119.013-.24.013-.357 0-.125-.01-.247-.029-.367a6.992 6.992 0 0 0-3.595-.634A7.018 7.018 0 0 0 10.49 4a5.992 5.992 0 0 0-.748-.144c-.187-.029-.375-.053-.566-.07A10.978 10.978 0 0 0 8.026 4c-.196.014-.391.03-.584.046a12.105 12.105 0 0 0-1.018.12c-.187.02-.373.046-.558.075a5.992 5.992 0 0 0-.815.215A6.992 6.992 0 0 1 5.5 6.5h6.5V5.5z"/>
-                      </svg>
-                      14 more
-                  </span>
-              </div>
-              
+                    <span class="course-meta-item">آخر تحديث 10/2024</span> · 
+                    <span class="course-meta-item">اللغة الإنجليزية</span> · 
+                    <span class="course-meta-item">14 لغة أخرى</span>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<section class="learn-section">
+    <div class="learn-content" style="direction: ltr; unicode-bidi: bidi-override;">
+        <h3>ما الذي ستتعلمه</h3>
+        <ul>
+            <li>.Python لغة البرمجة ستتقن من خلال بناء 100 مشروع فريد خلال 100 يوم</li>
+            <li>.Python بلغة البرمجة من احترافي بشكل البرمجة ستتمكن</li>
+            <li>.المطورين لوظائف التقدم من للتقدم Python مشروع 100 من مجموعة إنشاء</li>
+            <li>.الآلي التعلم والتعلم البيانات علم في Python استخدام</li>
+            <li>.Python باستخدام سطح المكتب وتطبيقات المستخدم واجهات بناء</li>
+            <li>.Python باستخدام الويب وتطوير التطبيقات والألعاب الأتمتة تعلم</li>
+            <li>.وغيرها Pandas وFlask وSoup Beautiful وSelenium مثل مكتبات استخدام</li>
+            <li>.Python باستخدام Snake و Pong و Blackjack مثل ألعاب بناء</li>
+        </ul>
+    </div>
+
+    <div class="learn-content" style="direction: ltr; unicode-bidi: bidi-override;">
+        <h3>ما الذي ستتعلمه</h3>
+        <ul>
+            <li>.Python لغة البرمجة ستتقن من خلال بناء 100 مشروع فريد خلال 100 يوم</li>
+            <li>.Python بلغة البرمجة من احترافي بشكل البرمجة ستتمكن</li>
+            <li>.المطورين لوظائف التقدم من للتقدم Python مشروع 100 من مجموعة إنشاء</li>
+            <li>.الآلي التعلم والتعلم البيانات علم في Python استخدام</li>
+            <li>.Python باستخدام سطح المكتب وتطبيقات المستخدم واجهات بناء</li>
+            <li>.Python باستخدام الويب وتطوير التطبيقات والألعاب الأتمتة تعلم</li>
+            <li>.وغيرها Pandas وFlask وSoup Beautiful وSelenium مثل مكتبات استخدام</li>
+            <li>.Python باستخدام Snake و Pong و Blackjack مثل ألعاب بناء</li>
+        </ul>
+    </div>
+
+    
+    <div class="learn-content" style="direction: ltr; unicode-bidi: bidi-override;">
+        <h3>ما الذي ستتعلمه</h3>
+        <ul>
+            <li>.Python لغة البرمجة ستتقن من خلال بناء 100 مشروع فريد خلال 100 يوم</li>
+            <li>.Python بلغة البرمجة من احترافي بشكل البرمجة ستتمكن</li>
+            <li>.المطورين لوظائف التقدم من للتقدم Python مشروع 100 من مجموعة إنشاء</li>
+            <li>.الآلي التعلم والتعلم البيانات علم في Python استخدام</li>
+            <li>.Python باستخدام سطح المكتب وتطبيقات المستخدم واجهات بناء</li>
+            <li>.Python باستخدام الويب وتطوير التطبيقات والألعاب الأتمتة تعلم</li>
+            <li>.وغيرها Pandas وFlask وSoup Beautiful وSelenium مثل مكتبات استخدام</li>
+            <li>.Python باستخدام Snake و Pong و Blackjack مثل ألعاب بناء</li>
+        </ul>
+    </div>
+
+    
+
+    
+    <section class="course-includes">
+        <h3>تشمل هذه الدورة:</h3>
+        <div class="includes-list">
+            <div class="include-item">
+                <p>52 ساعة من الفيديو حسب الطلب</p>
+                <span>🎥</span>
+            </div>
+            <div class="include-item">
+                <p>23 تمرين برمجي</p>
+                <span>💻</span>
+            </div>
+            <div class="include-item">
+                <p>واجبات</p>
+                <span>📄</span>
+            </div>
+            <div class="include-item">
+                <p>225 مقال</p>
+                <span>📚</span>
+            </div>
+            <div class="include-item">
+                <p>150 مورد قابل للتنزيل</p>
+                <span>📂</span>
+            </div>
+            <div class="include-item">
+                <p>الوصول عبر الجوال والتلفاز</p>
+                <span>📱</span>
+            </div>
+            <div class="include-item">
+                <p>شهادة إتمام</p>
+                <span>🏆</span>
+            </div>
+        </div>
+    
+        <div class="companies-offer">
+            <h4>أهم الشركات تقدم هذه الدورة لموظفيها</h4>
+            <p>تم اختيار هذه الدورة لمجموعتنا من الدورات الأعلى تقييمًا التي تثق بها الشركات حول العالم. <a href="#">اعرف المزيد</a></p>
+            <div class="companies-logos">
+                <img src="{{ asset('images/nasdaq-logo.png') }}" alt="ناسداك">
+                <img src="{{ asset('images/volkswagen-logo.png') }}" alt="فولكس فاجن">
+                <img src="{{ asset('images/box-logo.png') }}" alt="بوكس">
+                <img src="{{ asset('images/netapp-logo.png') }}" alt="نت آب">
+                <img src="{{ asset('images/eventbrite-logo.png') }}" alt="إيفنتبرايت">
+            </div>
+        </div>
+    </section>
+    
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
@@ -94,6 +166,66 @@
         easing: 'ease-in-out',
         once: true
     });
-</script>
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.getElementById('sidebar');
+        const learnSection = document.querySelector('.learn-section');
+        const margintop = 200;
+        let learnSectionTop = learnSection.offsetTop;
+        let learnSectionBottom = learnSectionTop + learnSection.offsetHeight;
+        let currentState = 'relative-sidebar'; // Initialize the current state
+
+        function handleScroll() {
+            const scrollY = window.scrollY;
+            const sidebarHeight = sidebar.getBoundingClientRect().height;
+            const sidebarBottomPosition = scrollY + sidebarHeight;
+            const stopPosition = learnSectionBottom - sidebarHeight;
+
+            if (window.innerWidth > 991) {
+                if (scrollY < learnSectionTop) {
+                    changeSidebarState('relative-sidebar');
+                    sidebar.style.top = '';
+                } else if (scrollY >= learnSectionTop && sidebarBottomPosition < stopPosition) {
+                    changeSidebarState('fixed-sidebar');
+                    sidebar.style.top = '20px';
+                } else if (sidebarBottomPosition >= stopPosition) {
+                    changeSidebarState('stop-fixed');
+                    sidebar.style.top = `${stopPosition + margintop - sidebarHeight}px`;
+                }
+            } else {
+                changeSidebarState('relative-sidebar');
+                sidebar.style.top = '';
+            }
+        }
+
+        function changeSidebarState(newState) {
+            // Check if the new state is different from the current state
+            if (currentState !== newState) {
+                // Update current state
+                currentState = newState;
+
+                // Remove all state classes
+                sidebar.classList.remove('relative-sidebar', 'fixed-sidebar', 'stop-fixed', 'fade-animation');
+
+                // Add the new state class
+                sidebar.classList.add(newState);
+
+                // Trigger animation only on state change
+                sidebar.classList.add('fade-animation');
+            }
+        }
+
+        // Listen for the animation end event to remove the fade-animation class
+        sidebar.addEventListener('animationend', () => {
+            sidebar.classList.remove('fade-animation');
+        });
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', () => {
+            learnSectionTop = learnSection.offsetTop;
+            learnSectionBottom = learnSectionTop + learnSection.offsetHeight;
+            handleScroll();
+        });
+    });
+</script>
 @endsection

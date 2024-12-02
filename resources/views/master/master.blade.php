@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   
-
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
@@ -27,6 +27,13 @@
   <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/details.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/playlist.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/videoplayer.css') }}">
+
+
+
+
   
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.bunny.net">
@@ -68,7 +75,7 @@
       <div class="container position-relative">
         <div class="site-navigation text-center">
           <a href="{{url('/')}}" class="logo menu-absolute m-0">
-            <img src="{{ asset('images/logo1.png') }}" alt="Logo" id="img-logo" style="width: 100px; margin-top: -24px;">
+            <img src="{{ asset('images/logo1.png') }}" alt="Logo" id="img-logo" style="width: 90px;">
           </a>
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
@@ -182,6 +189,12 @@
     <script src="{{ asset('js/jquery.sticky.js') }}"></script>
     <script src="{{ asset('js/aos.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/scripts-dist.js') }}"></script>
+
+
+
     
 
   </body>

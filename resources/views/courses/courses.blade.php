@@ -24,7 +24,7 @@
     <div class="row" style="flex-direction: column;">
         @foreach ($courses as $course)
             <a href="{{ route('courses.details', $course->id) }}" class="course-item d-flex align-items-center mb-4 p-3 border" style="flex-direction: row-reverse; text-decoration: none; color: inherit; width: 100%;">
-                <div class="vertical-bar"></div> <!-- الشريط العمودي الجديد -->
+                <div class="vertical-bar"></div> 
                 <div class="course-image ml-3">
                     @if($course->course_photo)
                         <img src="{{ asset('storage/'.$course->course_photo) }}" alt="Image" class="img-fluid" style="width: 100px; height: 100px;">
@@ -40,16 +40,24 @@
                     <span class="badge badge-success">أفضل بيع</span>
                     <div class="coures-deux" style="text-align: right;" >
                     <p class="course-details mb-0 text-muted">14 ساعات كاملة</p>
-                    <p class="course-update-date mb-0 text-muted">تحديث: 11/2021</p>
                     </div>
                 </div>
           
              
-                <div class="course-meta text-right">
-                    <p class="course-price font-weight-bold">12,99 $US <del>59,99 $US</del></p>
-                    <p><i class="uil uil-users-alt"> 200</i> {{ $course->enrollment_count }}</p>
-                    <span class="rating-value">{{ $course->rating }}</span> <i class="uil uil-star" style="color: #f5c518;">4.2</i>
-                </div>
+             
+                    <div class="course-meta text-right">
+                        <p class="course-price font-weight-bold">
+                            {{ $course->course_price }} DA
+                        </p>
+                        <p>
+                            <i class="uil uil-users-alt"></i> 
+                            {{ $course->enrollment_count }} مشترك
+                        </p>
+                        <p>
+                            <span class="rating-value">{{ $course->rating }}</span>
+                            <i class="uil uil-star" style="color: #f5c518;"></i>
+                        </p>
+                    </div>
             </a>
         @endforeach
     </div>

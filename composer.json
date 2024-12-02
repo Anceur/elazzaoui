@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "chargily/chargily-pay": "^2.0",
         "jeroennoten/laravel-adminlte": "^3.14",
         "laravel/framework": "^11.9",
         "laravel/jetstream": "^5.3",
@@ -66,6 +67,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

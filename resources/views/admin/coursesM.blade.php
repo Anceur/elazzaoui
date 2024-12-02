@@ -32,9 +32,21 @@
                 <input type="number" class="form-control" id="course_price" name="course_price" required>
             </div>
             <div class="form-group">
-                <label for="course_photo">Upload Photo</label>
+                <label for="course_video">Upload Main Video</label>
+                <input type="file" class="form-control-file" id="course_video" name="course_video" accept="video/*">
+            </div>
+            
+            <div class="form-group">
+                <label for="course_photo">Upload Course Photo</label>
                 <input type="file" class="form-control-file" id="course_photo" name="course_photo" accept="image/*">
             </div>
+
+            <div class="form-group">
+                <label for="playlist_videos">Upload Playlist Videos</label>
+                <input type="file" class="form-control-file" id="playlist_videos" name="playlist_videos[]" accept="video/*" multiple>
+                <small class="form-text text-muted">You can upload multiple videos for the playlist.</small>
+            </div>
+
             <div class="form-group">
                 <label for="course_desc">Course Description</label>
                 <textarea class="form-control" id="course_desc" name="course_desc" rows="3"></textarea>
@@ -50,8 +62,8 @@
                     <th>Course Name</th>
                     <th>Teacher</th>
                     <th>Price</th>
-                    <th>Actions</th>
                     <th>Description</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,6 +74,7 @@
                         <td>{{ $course->course_price }}</td>
                         <td>{{ $course->course_desc }}</td>
                         <td>
+                            <a href="{{ route('coursesM.edit', $course->id) }}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{{ route('coursesM.destroy', $course->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
@@ -78,6 +91,4 @@
 @section('js')
     <script> console.log("Course management page loaded."); </script>
 @stop
-
-
 @endif

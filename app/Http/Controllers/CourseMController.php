@@ -31,12 +31,27 @@ class CourseMController extends Controller
             'course_price' => 'required|numeric',
             'course_desc' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'course_video' => 'nullable|mimes:mp4,mov,avi|max:102400',
+            'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:102400',
         ]);
 
-        // التحقق من رفع الملف وحفظه
+        // رفع الصورة
         $photoPath = $request->hasFile('course_photo')
             ? $request->file('course_photo')->store('course_photos', 'public')
             : null;
+
+        // رفع الفيديو الرئيسي
+        $videoPath = $request->hasFile('course_video')
+            ? $request->file('course_video')->store('course_videos', 'public')
+            : null;
+
+        // رفع قائمة الفيديوهات
+        $playlistVideos = [];
+        if ($request->hasFile('playlist_videos')) {
+            foreach ($request->file('playlist_videos') as $video) {
+                $playlistVideos[] = $video->store('playlist_videos', 'public');
+            }
+        }
 
         // إنشاء دورة جديدة
         Course::create([
@@ -45,6 +60,8 @@ class CourseMController extends Controller
             'course_price' => $request->input('course_price'),
             'course_desc' => $request->input('course_desc'),
             'course_photo' => $photoPath,
+            'course_video' => $videoPath,
+            'playlist_videos' => $playlistVideos,
         ]);
 
         return redirect()->route('coursesM')->with('success', 'Course created successfully.');
@@ -53,8 +70,8 @@ class CourseMController extends Controller
     // عرض صفحة تعديل الدورة
     public function edit($id)
     {
-        $course = Course::findOrFail($id); // إيجاد الدورة
-        return view('coursesM.edit', compact('course')); // عرض صفحة تعديل الدورة
+        $course = Course::findOrFail($id);
+        return view('coursesM.edit', compact('course'));
     }
 
     // تحديث الدورة
@@ -68,10 +85,12 @@ class CourseMController extends Controller
             'course_price' => 'required|numeric',
             'course_desc' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'course_video' => 'nullable|mimes:mp4,mov,avi|max:102400',
+            'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:102400',
         ]);
 
+        // رفع الصورة
         if ($request->hasFile('course_photo')) {
-            // حذف الصورة القديمة
             if ($course->course_photo) {
                 Storage::delete('public/' . $course->course_photo);
             }
@@ -80,12 +99,32 @@ class CourseMController extends Controller
             $photoPath = $course->course_photo;
         }
 
+        // رفع الفيديو الرئيسي
+        if ($request->hasFile('course_video')) {
+            if ($course->course_video) {
+                Storage::delete('public/' . $course->course_video);
+            }
+            $videoPath = $request->file('course_video')->store('course_videos', 'public');
+        } else {
+            $videoPath = $course->course_video;
+        }
+
+        // رفع قائمة الفيديوهات
+        $playlistVideos = $course->playlist_videos ?? [];
+        if ($request->hasFile('playlist_videos')) {
+            foreach ($request->file('playlist_videos') as $video) {
+                $playlistVideos[] = $video->store('playlist_videos', 'public');
+            }
+        }
+
         $course->update([
             'course_name' => $request->input('course_name'),
             'course_teacher' => $request->input('course_teacher'),
             'course_price' => $request->input('course_price'),
             'course_desc' => $request->input('course_desc'),
             'course_photo' => $photoPath,
+            'course_video' => $videoPath,
+            'playlist_videos' => $playlistVideos,
         ]);
 
         return redirect()->route('coursesM')->with('success', 'Course updated successfully.');
@@ -96,9 +135,17 @@ class CourseMController extends Controller
     {
         $course = Course::findOrFail($id);
 
-        // حذف الصورة إذا كانت موجودة
+        // حذف الملفات إذا كانت موجودة
         if ($course->course_photo) {
             Storage::delete('public/' . $course->course_photo);
+        }
+        if ($course->course_video) {
+            Storage::delete('public/' . $course->course_video);
+        }
+        if ($course->playlist_videos) {
+            foreach ($course->playlist_videos as $video) {
+                Storage::delete('public/' . $video);
+            }
         }
 
         $course->delete();

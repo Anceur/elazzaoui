@@ -11,6 +11,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PaymentController;
+use TheHocineSaad\LaravelChargilyEPay\Epay_Webhook;
 
 
 
@@ -93,10 +94,10 @@ Route::middleware(['auth:sanctum', 'verified', 'admin:admin'])->prefix('admin')-
 
     // Courses management
     Route::get('/courses', [CourseMController::class, 'index'])->name('coursesM');
-    Route::get('/courses/{id}/edit', [CourseMController::class, 'edit'])->name('coursesM.edit');
     Route::get('/courses/create', [CourseMController::class, 'create'])->name('coursesM.create');
-    Route::put('/courses/{id}', [CourseMController::class, 'update'])->name('coursesM.update');
     Route::post('/courses', [CourseMController::class, 'store'])->name('coursesM.store');
+    Route::get('/courses/{id}/edit', [CourseMController::class, 'edit'])->name('coursesM.edit');
+    Route::put('/courses/{id}', [CourseMController::class, 'update'])->name('coursesM.update');
     Route::delete('/courses/{id}', [CourseMController::class, 'destroy'])->name('coursesM.destroy');
 
     // Team management
@@ -123,12 +124,25 @@ Route::get('/staff', [EmployeController::class, 'index'])->name('staff.index');
 
 
 Route::get('/courses/details/{id}', [DetailsController::class, 'detail'])->name('courses.details');
+Route::get('/playlist/{id}', [DetailsController::class, 'play'])->name('courses.playlist');
+Route::get('/playlist/videoplayer/{id}', [DetailsController::class, 'videoplay'])->name('courses.videoplayer');
+Route::get('/courses/{id}/video/{video?}', [CourseMController::class, 'show'])->name('videoplay');
+
+
 
 Route::post('/contact', [ContactController::class, 'sendContactMessage'])->name('contact.send');
 
 
 
 
-Route::get('/create-invoice', [PaymentController::class, 'createInvoice'])->name('create.invoice');
 
-Route::get('/payment/callback', [PaymentController::class, 'paymentCallback'])->name('payment.callback');
+
+
+
+
+
+
+
+// Route::post('chargilypay/redirect', [ChargilyPayController::class, "redirect"])->name("chargilypay.redirect");
+// Route::get('chargilypay/back', [ChargilyPayController::class, "back"])->name("chargilypay.back");
+// Route::post('chargilypay/webhook', [ChargilyPayController::class, "webhook"])->name("chargilypay.webhook_endpoint");
