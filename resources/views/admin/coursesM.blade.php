@@ -32,6 +32,11 @@
                 <input type="number" class="form-control" id="course_price" name="course_price" required>
             </div>
             <div class="form-group">
+                <label for="course_details">تفاصيل الدورة</label>
+                <textarea class="form-control" id="course_details" name="course_details" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group">
                 <label for="course_video">Upload Main Video</label>
                 <input type="file" class="form-control-file" id="course_video" name="course_video" accept="video/*">
             </div>

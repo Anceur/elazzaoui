@@ -16,8 +16,8 @@
                 </div>
                 
                 <div class="tab-container">
-                    <button class="tab-button active">شخصي</button>
-                    <button class="tab-button">فريق</button>
+                    {{-- <button class="tab-button active">شخصي</button>
+                    <button class="tab-button">فريق</button> --}}
                 </div>
                 <div class="pricing-section">
                     {{-- @if(Auth::check())
@@ -28,15 +28,14 @@
                     <a href="{{ url('register') }}" class="btn btn-primary enroll-btn">Try Personal Plan for free</a>
                 @endif --}}
                     <p class="price">${{ $courses->course_price }}</p>
-                    <a href="" class="btn-1 btn-primary enroll-btn">جرّب الخطة الشخصية مجانًا</a>
-                    <a href="{{ route('courses.playlist', $courses->id) }}">Go to Playlist</a>
+                    <a href="{{ route('courses.playlist', $courses->id) }}" class="btn-1 btn-primary enroll-btn">جرّب الخطة الشخصية مجانًا</a>
 
 
-                    <p class="price-details">تبدأ من €15.00 شهريًا بعد الفترة التجريبية</p>
+                    {{-- <p class="price-details">تبدأ من €15.00 شهريًا بعد الفترة التجريبية</p> --}}
                 </div>
-                <div class="subscription-info">
+                {{-- <div class="subscription-info">
                     <p>احصل على هذه الدورة، بالإضافة إلى أكثر من 12,000 دورة عالية التقييم، مع الخطة الشخصية. <a href="#">اعرف المزيد</a></p>
-                </div>
+                </div> --}}
             </div>
 
             <!-- قسم المحتوى الأيسر -->
@@ -55,9 +54,9 @@
                 <!-- قسم "ما ستتعلمه" -->
                 <!-- تفاصيل الدورة -->
                 <div class="course-details">
-                    <span class="course-meta-item">آخر تحديث 10/2024</span> · 
-                    <span class="course-meta-item">اللغة الإنجليزية</span> · 
-                    <span class="course-meta-item">14 لغة أخرى</span>
+                    {{-- <span class="course-meta-item">آخر تحديث 10/2024</span> ·  --}}
+                    <span class="course-meta-item">{{ $courses->course_name }}</span> · 
+                    {{-- <span class="course-meta-item">14 لغة أخرى</span> --}}
                 </div>
             </div>
         </div>
@@ -65,47 +64,19 @@
 </div>
 
 <section class="learn-section">
-    <div class="learn-content" style="direction: ltr; unicode-bidi: bidi-override;">
-        <h3>ما الذي ستتعلمه</h3>
-        <ul>
-            <li>.Python لغة البرمجة ستتقن من خلال بناء 100 مشروع فريد خلال 100 يوم</li>
-            <li>.Python بلغة البرمجة من احترافي بشكل البرمجة ستتمكن</li>
-            <li>.المطورين لوظائف التقدم من للتقدم Python مشروع 100 من مجموعة إنشاء</li>
-            <li>.الآلي التعلم والتعلم البيانات علم في Python استخدام</li>
-            <li>.Python باستخدام سطح المكتب وتطبيقات المستخدم واجهات بناء</li>
-            <li>.Python باستخدام الويب وتطوير التطبيقات والألعاب الأتمتة تعلم</li>
-            <li>.وغيرها Pandas وFlask وSoup Beautiful وSelenium مثل مكتبات استخدام</li>
-            <li>.Python باستخدام Snake و Pong و Blackjack مثل ألعاب بناء</li>
-        </ul>
-    </div>
 
     <div class="learn-content" style="direction: ltr; unicode-bidi: bidi-override;">
         <h3>ما الذي ستتعلمه</h3>
+     
+        @if($courses->course_details)
         <ul>
-            <li>.Python لغة البرمجة ستتقن من خلال بناء 100 مشروع فريد خلال 100 يوم</li>
-            <li>.Python بلغة البرمجة من احترافي بشكل البرمجة ستتمكن</li>
-            <li>.المطورين لوظائف التقدم من للتقدم Python مشروع 100 من مجموعة إنشاء</li>
-            <li>.الآلي التعلم والتعلم البيانات علم في Python استخدام</li>
-            <li>.Python باستخدام سطح المكتب وتطبيقات المستخدم واجهات بناء</li>
-            <li>.Python باستخدام الويب وتطوير التطبيقات والألعاب الأتمتة تعلم</li>
-            <li>.وغيرها Pandas وFlask وSoup Beautiful وSelenium مثل مكتبات استخدام</li>
-            <li>.Python باستخدام Snake و Pong و Blackjack مثل ألعاب بناء</li>
+            @foreach(explode("\n", $courses->course_details) as $detail)
+                <li>{{ $detail }}</li>
+            @endforeach
         </ul>
-    </div>
-
+    @endif
     
-    <div class="learn-content" style="direction: ltr; unicode-bidi: bidi-override;">
-        <h3>ما الذي ستتعلمه</h3>
-        <ul>
-            <li>.Python لغة البرمجة ستتقن من خلال بناء 100 مشروع فريد خلال 100 يوم</li>
-            <li>.Python بلغة البرمجة من احترافي بشكل البرمجة ستتمكن</li>
-            <li>.المطورين لوظائف التقدم من للتقدم Python مشروع 100 من مجموعة إنشاء</li>
-            <li>.الآلي التعلم والتعلم البيانات علم في Python استخدام</li>
-            <li>.Python باستخدام سطح المكتب وتطبيقات المستخدم واجهات بناء</li>
-            <li>.Python باستخدام الويب وتطوير التطبيقات والألعاب الأتمتة تعلم</li>
-            <li>.وغيرها Pandas وFlask وSoup Beautiful وSelenium مثل مكتبات استخدام</li>
-            <li>.Python باستخدام Snake و Pong و Blackjack مثل ألعاب بناء</li>
-        </ul>
+   
     </div>
 
     
@@ -114,26 +85,26 @@
     <section class="course-includes">
         <h3>تشمل هذه الدورة:</h3>
         <div class="includes-list">
-            <div class="include-item">
+            {{-- <div class="include-item">
                 <p>52 ساعة من الفيديو حسب الطلب</p>
                 <span>🎥</span>
-            </div>
-            <div class="include-item">
+            </div> --}}
+            {{-- <div class="include-item">
                 <p>23 تمرين برمجي</p>
                 <span>💻</span>
-            </div>
-            <div class="include-item">
+            </div> --}}
+            {{-- <div class="include-item">
                 <p>واجبات</p>
                 <span>📄</span>
-            </div>
-            <div class="include-item">
+            </div> --}}
+            {{-- <div class="include-item">
                 <p>225 مقال</p>
                 <span>📚</span>
-            </div>
-            <div class="include-item">
+            </div> --}}
+            {{-- <div class="include-item">
                 <p>150 مورد قابل للتنزيل</p>
                 <span>📂</span>
-            </div>
+            </div> --}}
             <div class="include-item">
                 <p>الوصول عبر الجوال والتلفاز</p>
                 <span>📱</span>
@@ -147,13 +118,13 @@
         <div class="companies-offer">
             <h4>أهم الشركات تقدم هذه الدورة لموظفيها</h4>
             <p>تم اختيار هذه الدورة لمجموعتنا من الدورات الأعلى تقييمًا التي تثق بها الشركات حول العالم. <a href="#">اعرف المزيد</a></p>
-            <div class="companies-logos">
+            {{-- <div class="companies-logos">
                 <img src="{{ asset('images/nasdaq-logo.png') }}" alt="ناسداك">
                 <img src="{{ asset('images/volkswagen-logo.png') }}" alt="فولكس فاجن">
                 <img src="{{ asset('images/box-logo.png') }}" alt="بوكس">
                 <img src="{{ asset('images/netapp-logo.png') }}" alt="نت آب">
                 <img src="{{ asset('images/eventbrite-logo.png') }}" alt="إيفنتبرايت">
-            </div>
+            </div> --}}
         </div>
     </section>
     

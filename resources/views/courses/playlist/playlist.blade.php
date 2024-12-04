@@ -17,5 +17,10 @@
 
                 </div>
         </div>
+        <div class="all-courses">
+            {{-- @foreach($courses->courses)
+            //afficher all coureses  
+            @endforeach --}}
+        </div>
     </div>
 @endsection

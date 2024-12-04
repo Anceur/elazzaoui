@@ -30,6 +30,7 @@ class CourseMController extends Controller
             'course_teacher' => 'required|string|max:255',
             'course_price' => 'required|numeric',
             'course_desc' => 'nullable|string',
+            'course_details' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'course_video' => 'nullable|mimes:mp4,mov,avi|max:102400',
             'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:102400',
@@ -59,6 +60,8 @@ class CourseMController extends Controller
             'course_teacher' => $request->input('course_teacher'),
             'course_price' => $request->input('course_price'),
             'course_desc' => $request->input('course_desc'),
+            'course_details' => $request->input('course_details'),
+
             'course_photo' => $photoPath,
             'course_video' => $videoPath,
             'playlist_videos' => $playlistVideos,
@@ -84,6 +87,7 @@ class CourseMController extends Controller
             'course_teacher' => 'required|string|max:255',
             'course_price' => 'required|numeric',
             'course_desc' => 'nullable|string',
+            'course_details' => 'nullable|string', // التحقق باستخدام الاسم الجديد
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'course_video' => 'nullable|mimes:mp4,mov,avi|max:102400',
             'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:102400',
@@ -122,6 +126,7 @@ class CourseMController extends Controller
             'course_teacher' => $request->input('course_teacher'),
             'course_price' => $request->input('course_price'),
             'course_desc' => $request->input('course_desc'),
+            'course_details' => $request->input('course_details'),
             'course_photo' => $photoPath,
             'course_video' => $videoPath,
             'playlist_videos' => $playlistVideos,
