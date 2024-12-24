@@ -53,6 +53,9 @@ Route::get('/courses', function () {
     return view('courses.courses');
 });
 
+Route::get('/waiting', function () {
+    return view('waiting.waiting');
+});
 
 Route::middleware([
     'auth:sanctum',
@@ -125,8 +128,11 @@ Route::get('/staff', [EmployeController::class, 'index'])->name('staff.index');
 
 Route::get('/courses/details/{id}', [DetailsController::class, 'detail'])->name('courses.details');
 Route::get('/playlist/{id}', [DetailsController::class, 'play'])->name('courses.playlist');
+// web.php
+
 Route::get('/playlist/videoplayer/{id}', [DetailsController::class, 'videoplay'])->name('courses.videoplayer');
-Route::get('/courses/{id}/video/{video?}', [CourseMController::class, 'show'])->name('videoplay');
+Route::get('/courses/{id}/video/{video?}', [DetailsController::class, 'show'])->name('courses.videoplayer');
+
 
 
 

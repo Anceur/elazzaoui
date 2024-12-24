@@ -2,13 +2,13 @@
 
 
 @section('content')
-<div class="untree_co-hero inner-page overlay" style="background-image: url('images/img-school-5-min.jpg');">
+<div class="untree_co-hero inner-page overlay" style="background-image: url('images/hero2.png');">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-12">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100" style="font-family: 'Amiri', serif;">تسجيل الدخول</h1>
+            <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100" style="font-family: 'Almarai', serif;">تسجيل الدخول</h1>
           </div>
         </div>
       </div>

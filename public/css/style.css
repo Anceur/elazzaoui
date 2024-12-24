@@ -9,6 +9,12 @@
 * Pinterest: https://pinterest.com/Untree_co/
 */
 @import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+@import url(https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap');
+
+
  
 html{
   scroll-behavior: smooth;
@@ -16,7 +22,7 @@ html{
   
 }
 body {
-  font-family: 'Amiri', serif;
+  font-family: 'Almarai', serif;
   line-height: 1.6;
   background-color: #ffffff;
   overflow-x: hidden;
@@ -983,7 +989,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     color: #ffffff;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: .1rem; }
+    }
   .untree_co-hero .heading, .bg-img .heading {
     font-size: 45px;
     font-weight: 700;
@@ -1014,11 +1020,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     min-height: 450px; }
 
 .untree_co-section {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   position: relative; }
   @media (max-width: 991.98px) {
     .untree_co-section {
-      padding: 50px 0; } }
+      padding: 0px 0; } }
   .untree_co-section .heading h3 {
     font-size: 35px;
     color: #000000; }
@@ -1026,6 +1032,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     .untree_co-section .heading {
       font-size: 20px; } }
   .untree_co-section .heading strong {
+    font-weight: 700; }
+
+.untree_co-section_ex {
+  padding: 100px 0;
+  position: relative; }
+  @media (max-width: 991.98px) {
+    .untree_co-section_ex {
+      padding: 50px 0; } }
+  .untree_co-section_ex .heading h3 {
+    font-size: 35px;
+    color: #000000; }
+  @media (max-width: 991.98px) {
+    .untree_co-section_ex .heading {
+      font-size: 20px; } }
+  .untree_co-section_ex .heading strong {
     font-weight: 700; }
 
 .position-relative {
@@ -1522,7 +1543,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   padding: 70px 0; }
 
 .img-wrap-2 {
-  margin-top: -120px;
+  margin-top: -45px;
   position: relative;
   z-index: 9; }
   .img-wrap-2 .dotted:before {

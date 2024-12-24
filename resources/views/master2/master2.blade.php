@@ -11,6 +11,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -27,12 +31,20 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
   <link rel="stylesheet" href="{{ asset('css/details.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/playlist.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/videoplayer.css') }}">
+
+
+
 
 
 
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.bunny.net">
      <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
      <!-- Scripts -->
      @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -75,8 +87,8 @@
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
             <li ><a href="{{url('/')}}">الصفحة الرئسية</a></li>
-            <li><a href="{{url('/courses')}}">الدورات</a></li>
-            <li><a href="{{url('/staff')}}">طاقم العمل</a></li>
+            {{-- <li><a href="{{url('/courses')}}">الدورات</a></li>
+            <li><a href="{{url('/staff')}}">طاقم العمل</a></li> --}}
             <li><a href="{{url('/news')}}">أخبار</a></li>
             <li><a href="{{url('/about')}}">خدمات</a></li>
             <li><a href="{{url('/contact')}}">اتصال بنا</a></li>

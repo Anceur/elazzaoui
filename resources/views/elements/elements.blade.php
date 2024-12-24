@@ -7,7 +7,7 @@
 
 @extends('master.master')
 @section('content')  
-  <div class="untree_co-hero overlay" style="background-image: url('images/img-school-3-min.jpg');">
+  <div class="untree_co-hero overlay" style="background-image: url('');">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-12">

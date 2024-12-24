@@ -1,6 +1,6 @@
 
 
-@extends('master.master')
+@extends('master2.master2')
 
 @section('content')
 <div class="course-details-page">
@@ -27,8 +27,18 @@
                     <!-- إذا كان المستخدم غير مسجل، توجيهه إلى صفحة التسجيل -->
                     <a href="{{ url('register') }}" class="btn btn-primary enroll-btn">Try Personal Plan for free</a>
                 @endif --}}
-                    <p class="price">${{ $courses->course_price }}</p>
+                    {{-- <p class="price">{{ $courses->course_price }} DA</p>
                     <a href="{{ route('courses.playlist', $courses->id) }}" class="btn-1 btn-primary enroll-btn">جرّب الخطة الشخصية مجانًا</a>
+ --}}
+ <p class="price">{{ $courses->course_price }} DA</p>
+
+@if(Auth::check())
+    <!-- إذا كان المستخدم مسجلاً، توجيهه إلى صفحة الدفع -->
+    <a href="{{ route('courses.playlist', $courses->id) }}" class="btn-1 btn-primary enroll-btn">جرّب الخطة الشخصية مجانًا</a>
+@else
+    <!-- إذا كان المستخدم غير مسجل، توجيهه إلى صفحة التسجيل -->
+    <a href="{{ url('register') }}" class="btn-1 btn-primary enroll-btn">جرّب الخطة الشخصية مجانًا</a>
+@endif
 
 
                     {{-- <p class="price-details">تبدأ من €15.00 شهريًا بعد الفترة التجريبية</p> --}}
@@ -44,10 +54,10 @@
                 <p class="course-subtitle">{{ $courses->course_description }}</p>
                 <div class="course-rating">
                     <span class="badge badge-success">الأكثر مبيعًا</span>
-                    <span class="rating">4.7</span>
-                    <span class="star-rating">★★★★☆</span>
-                    <a href="#" class="ratings-count">(330,788 تقييم)</a>
-                    <span class="students-count">1,414,171 طالب</span>
+                    <span class="rating">{{ $courses->rating }}</span>
+                    {{-- <span class="star-rating">★★★★☆</span>
+                    <a href="#" class="ratings-count">(330,788 تقييم)</a> --}}
+                    <span class="students-count">{{ $courses->enrollment_count }}</span>
                 </div>
                 <p class="course-author">من إعداد {{ $courses->course_teacher }}</p>
                 
@@ -69,9 +79,9 @@
         <h3>ما الذي ستتعلمه</h3>
      
         @if($courses->course_details)
-        <ul>
+        <ul class="sa">
             @foreach(explode("\n", $courses->course_details) as $detail)
-                <li>{{ $detail }}</li>
+                <ol>{{ $detail }}</ol>
             @endforeach
         </ul>
     @endif
@@ -106,12 +116,16 @@
                 <span>📂</span>
             </div> --}}
             <div class="include-item">
+                <div class="include-item-dts">
                 <p>الوصول عبر الجوال والتلفاز</p>
                 <span>📱</span>
+                </div>
             </div>
             <div class="include-item">
+                <div class="include-item-dts">
                 <p>شهادة إتمام</p>
                 <span>🏆</span>
+                </div>
             </div>
         </div>
     
@@ -136,67 +150,6 @@
         duration: 1000,
         easing: 'ease-in-out',
         once: true
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const sidebar = document.getElementById('sidebar');
-        const learnSection = document.querySelector('.learn-section');
-        const margintop = 200;
-        let learnSectionTop = learnSection.offsetTop;
-        let learnSectionBottom = learnSectionTop + learnSection.offsetHeight;
-        let currentState = 'relative-sidebar'; // Initialize the current state
-
-        function handleScroll() {
-            const scrollY = window.scrollY;
-            const sidebarHeight = sidebar.getBoundingClientRect().height;
-            const sidebarBottomPosition = scrollY + sidebarHeight;
-            const stopPosition = learnSectionBottom - sidebarHeight;
-
-            if (window.innerWidth > 991) {
-                if (scrollY < learnSectionTop) {
-                    changeSidebarState('relative-sidebar');
-                    sidebar.style.top = '';
-                } else if (scrollY >= learnSectionTop && sidebarBottomPosition < stopPosition) {
-                    changeSidebarState('fixed-sidebar');
-                    sidebar.style.top = '20px';
-                } else if (sidebarBottomPosition >= stopPosition) {
-                    changeSidebarState('stop-fixed');
-                    sidebar.style.top = `${stopPosition + margintop - sidebarHeight}px`;
-                }
-            } else {
-                changeSidebarState('relative-sidebar');
-                sidebar.style.top = '';
-            }
-        }
-
-        function changeSidebarState(newState) {
-            // Check if the new state is different from the current state
-            if (currentState !== newState) {
-                // Update current state
-                currentState = newState;
-
-                // Remove all state classes
-                sidebar.classList.remove('relative-sidebar', 'fixed-sidebar', 'stop-fixed', 'fade-animation');
-
-                // Add the new state class
-                sidebar.classList.add(newState);
-
-                // Trigger animation only on state change
-                sidebar.classList.add('fade-animation');
-            }
-        }
-
-        // Listen for the animation end event to remove the fade-animation class
-        sidebar.addEventListener('animationend', () => {
-            sidebar.classList.remove('fade-animation');
-        });
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', () => {
-            learnSectionTop = learnSection.offsetTop;
-            learnSectionBottom = learnSectionTop + learnSection.offsetHeight;
-            handleScroll();
-        });
     });
 </script>
 @endsection

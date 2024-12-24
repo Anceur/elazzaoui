@@ -21,6 +21,6 @@ class Course extends Model
     ];
 
     protected $casts = [
-        'playlist_videos' => 'array',
-    ];
+        'playlist_videos' => 'json', // Change 'array' to 'json'
+    ];    
 }

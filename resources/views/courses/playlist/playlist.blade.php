@@ -1,26 +1,29 @@
-@extends('master.master')
+@extends('master2.master2')
 
 @section('content')
-<div class="shopping-cart-container">
-    <h1 class="cart-title">Courses Cart</h1>
-    <p class="cart-subtitle">0 Courses in Cart</p>
-        <div class="shopping-cart">
-                <div class="empty-cart-content">
-                    <img src="{{ asset('storage/' . $courses->course_photo) }}" alt="Course Image" class="course-image">
-                    
-                    <p class="empty-cart-message">Your cart is empty. Keep looking to find a course!</p>
-                    <a href="{{ route('courses.videoplayer', ['id' => $courses->id]) }}" class="btn-keep-shopping">Keep looking</a>
-
-                </div>
-
-                <div class="all-coureses">
-
-                </div>
+<section class="shopping-cart-section">
+    <div class="shopping-cart-container">
+        <!-- Header -->
+        <div class="shopping-cart-header">
+            <h1 class="cart-title"> دورة {{ $courses->course_name }}</h1>
+            {{-- <p class="cart-subtitle">0 Courses in Cart</p> --}}
         </div>
-        <div class="all-courses">
-            {{-- @foreach($courses->courses)
-            //afficher all coureses  
-            @endforeach --}}
+
+        <!-- Content -->
+        <div class="shopping-cart-content">
+            <!-- Course Image -->
+            <div class="course-image-container">
+                <img src="{{ asset('storage/' . $courses->course_photo) }}" alt="Course Image" class="course-image">
+            </div>
+
+            <!-- Details -->
+            <div class="cart-details">
+                <p class="empty-cart-message">{{ $courses->course_name }}</p>
+                <p class="empty-cart-message">{{ $courses->course_description }}</p>
+
+                <a href="{{ route('courses.videoplayer', ['id' => $courses->id]) }}" class="btn-keep-shopping">تصفح الدورة</a>
+            </div>
         </div>
     </div>
+</section>
 @endsection

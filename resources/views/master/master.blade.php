@@ -5,13 +5,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="Untree.co">
   <link rel="shortcut icon" href="favicon.png">
 
-  <meta name="description" content="" />
+  <meta name="description" content=" العزاوي سكوول تعد من أولى منصات تعلم اللغات في الجزائر، متاحة للجميع، وتقدم الحل الأمثل لتعلم اللغات و بأسعار مناسبة. 
+منصة واضحة ومنظَّمة مع تمارين تفاعلية تلبي احتياجاتك. 
+بفضل مجموعة أساتذتنا المتميزين، سنكون شركاءك لتعلم اللغات.
+ احجز دورتك الأولى الآن وانضم إلينا لتبدأ طريقك نحو إتقان اللغة." />
   <meta name="keywords" content="bootstrap, bootstrap4" />
+  <meta charset="UTF-8">
+  <meta name="author" content="ANCEUR Boumedienne Yassine ,BOUROKBA Mohamed Aimen , MAHTOUT Ali Missoum">
+  <meta name="robots" content="">
+
+
 
   <link href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -27,7 +40,6 @@
   <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/details.css') }}">
   <link rel="stylesheet" href="{{ asset('css/playlist.css') }}">
   <link rel="stylesheet" href="{{ asset('css/videoplayer.css') }}">
 
@@ -78,10 +90,11 @@
             <img src="{{ asset('images/logo1.png') }}" alt="Logo" id="img-logo" style="width: 90px;">
           </a>
 
+          
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
             <li ><a href="{{url('/')}}">الصفحة الرئسية</a></li>
-            <li><a href="{{url('/courses')}}">الدورات</a></li>
-            <li><a href="{{url('/staff')}}">طاقم العمل</a></li>
+            {{-- <li><a href="{{url('/courses')}}">الدورات</a></li>
+            <li><a href="{{url('/staff')}}">طاقم العمل</a></li> --}}
             <li><a href="{{url('/news')}}">أخبار</a></li>
             <li><a href="{{url('/about')}}">خدمات</a></li>
             <li><a href="{{url('/contact')}}">اتصال بنا</a></li>
@@ -102,6 +115,8 @@
         @endguest
                       <!-- Settings Dropdown -->           
           </ul>
+
+
           <div class="float-right d-inline-block">
                   <!-- Show the navigation menu if the user is logged in -->
         @auth

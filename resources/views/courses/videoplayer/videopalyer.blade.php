@@ -1,4 +1,4 @@
-{{-- @extends('master.master') --}}
+@extends('master2.master2')
 
 @section('content')
 <div class="video-player-container">
@@ -18,10 +18,10 @@
     <div class="content-section">
         <h3>قائمة الفيديوهات</h3>
         <ul class="course-content-list">
-            @if(is_array($course->playlist_videos))
-                @foreach($course->playlist_videos as $index => $video)
-                    <li class="lesson-item {{ $video == basename($videoSrc) ? 'active' : '' }}">
-                        <a href="{{ route('videoplay', ['id' => $course->id, 'video' => $video]) }}" class="play-video">
+            @if(!empty($playlistVideos) && is_array($playlistVideos))
+                @foreach($playlistVideos as $index => $video)
+                    <li class="lesson-item {{ basename($video) == basename($videoSrc) ? 'active' : '' }}">
+                        <a href="{{ route('courses.videoplayer', ['id' => $course->id, 'video' => basename($video)]) }}" class="play-video">
                             <i class="fas fa-play-circle"></i> فيديو {{ $index + 1 }}
                         </a>
                     </li>
@@ -30,6 +30,6 @@
                 <p>لا توجد فيديوهات في قائمة التشغيل.</p>
             @endif
         </ul>
-    </div>
+    </div>    
 </div>
-{{-- @endsection --}}
+@endsection

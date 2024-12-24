@@ -4,13 +4,13 @@
     
 
 
-  <div class="untree_co-hero overlay" style="background-image: url('images/img-school-1-min.jpg');">
+  <div class="untree_co-hero overlay" style="background-image: url('images/hero2.png');">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-12">
           <div class="row justify-content-center ">
             <div class="col-lg-6 text-center ">
-              <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100" style="font-family: 'Amiri', serif;">معلومات عنا</h1>
+              <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100" style="font-family: 'Almarai', serif;">معلومات عنا</h1>
               <div class="mb-5 text-white desc mx-auto" data-aos="fade-up" data-aos-delay="200">
                 <p>نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي والابتكار. نقدم برامج متنوعة تشمل المواد الأساسية والدورات الخاصة</p>
               </div>
@@ -34,7 +34,7 @@
         
         <div class="row mt-5 justify-content-between" style="text-align: right">
           <div class="col-lg-4 pr-lg-5">
-            <h3 class="mb-4 heading-h3" data-aos="fade-right">من نحن ؟<span></span></h3>
+            <h3 class="mb-4 heading-h3" data-aos="fade-right">نبذة عنّا<span></span></h3>
             <p class="lead" data-aos="fade-right"> العزاوي سكوول، مؤسسة متخصصة في تعليم اللغات منذ 1 نوفمبر 2018</p>
             <p class="mb-4" data-aos="fade-right"> ساهمنا في تكوين مئات الطلبة في مجال اللغات، وحققنا المراتب الأولى في مسابقات السوروبان. نحن ملتزمون بتوفير بيئة تعليمية محفزة تركز على الإبداع والابتكار، مع التركيز على استمرارية التعليم و السعي إلى التفوق في جميع المجالات، وتشجيع المسؤولية الاجتماعية</p>
             <p class="mb-4" data-aos="fade-right">فريق شباب يقدم حلولًا تعليمية عالية الجودة في اللغات العربية، الإنجليزية، الألمانية، الفرنسية، الإسبانية، التركية، الإيطالية، الروسية. . . وكذلك في مجال الحساب الذهني</p>
@@ -42,7 +42,7 @@
           </div>
           <div class="col-lg-7 mb-5 mb-lg-0">
             <figure class="dotted-bg gsap-reveal-img ">
-              <img src="images/about_me_pic2.jpeg" alt="Image" class="img-fluid">
+              <img src="images/phto.png" alt="Image" class="img-fluid">
             </figure>
           </div>
         </div>
@@ -134,7 +134,7 @@
               <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
             </div>
 
-            <div class="d-flex align-items-center mb-4">            
+            {{-- <div class="d-flex align-items-center mb-4">            
               <div class="filter-wrap">
                 <div class="filter ml-auto" id="filters">
                   <a href="#" class="active" data-filter="*">All</a>
@@ -145,7 +145,7 @@
                 </div>
               </div>
 
-            </div>
+            </div> --}}
 
 
             
@@ -153,73 +153,74 @@
 
               <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
 
-                <a href="images/work_3_md.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Watch">
+                <a href="images/phto4.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" >
+                  {{-- data-caption="Watch" --}}
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
-                        <h3>Modern Building</h3>
-                        <p>branding, packaging</p>
+                        {{-- <h3>Modern Building</h3>
+                        <p>branding, packaging</p> --}}
                       </div>
                     </div>
-                    <img src="images/work_3_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                    <img src="images/phto4.PNG" class="lazyload  img-fluid" alt="Images" />
                   </a>
 
               </div>
 
               <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
 
-                <a href="images/work_4_full.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Watch">
+                <a href="images/phto5.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Watch">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
-                        <h3>Watch</h3>
-                        <p>web, packaging</p>
+                        {{-- <h3>Watch</h3>
+                        <p>web, packaging</p> --}}
                       </div>
                     </div>
-                    <img src="images/work_4_full.jpg" class="lazyload  img-fluid" alt="Images" />
+                    <img src="images/phto5.PNG" class="lazyload  img-fluid" alt="Images" />
                   </a>
 
               </div>
 
               <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="images/work_5_md.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Shoe Rebranding">
+                <a href="images/phto6.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Shoe Rebranding">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
-                        <h3>Shoe Rebranding</h3>
-                        <p>illustration, packaging</p>
+                        {{-- <h3>Shoe Rebranding</h3>
+                        <p>illustration, packaging</p> --}}
                       </div>
                     </div>
-                    <img src="images/work_5_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                    <img src="images/phto6.PNG" class="lazyload  img-fluid" alt="Images" />
                   </a>
               </div>
 
               <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="images/work_6_md.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Shoe Rebranding">
+                <a href="images/phto1.png" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Shoe Rebranding">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
-                        <h3>Reshape</h3>
-                        <p>web, branding</p>
+                        {{-- <h3>Reshape</h3>
+                        <p>web, branding</p> --}}
                       </div>
                     </div>
-                    <img src="images/work_6_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                    <img src="images/phto1.png" class="lazyload  img-fluid" alt="Images" />
                   </a>
               </div>
 
               <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="images/work_7_a_md.jpg" class="portfolio-item item-portrait isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Modern Building">
+                <a href="images/phto2.PNG" class="portfolio-item item-portrait isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Modern Building">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
-                        <h3>Modern Building</h3>
-                        <p>branding, packaging</p>
+                        {{-- <h3>Modern Building</h3>
+                        <p>branding, packaging</p> --}}
                       </div>
                     </div>
-                    <img src="images/work_7_a_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                    <img src="images/phto2.PNG" class="lazyload  img-fluid" alt="Images" />
                   </a>
               </div>
-
+{{-- 
               <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Showreel 2019">
                     <div class="overlay">
@@ -231,18 +232,18 @@
                     </div>
                     <img src="images/work_8_md.jpg" class="lazyload  img-fluid" alt="Images" />
                   </a>
-              </div>
+              </div> --}}
 
               <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="images/work_9_a_md.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery" data-caption="Render Packaging">
                     <div class="overlay">
                       <span class="wrap-icon icon-photo2"></span>
                       <div class="portfolio-item-content">
-                        <h3>Render Packaging</h3>
-                        <p>web, illustration</p>
+                        {{-- <h3>Render Packaging</h3>
+                        <p>web, illustration</p> --}}
                       </div>
                     </div>
-                    <img src="images/work_9_a_md.jpg" class="lazyload  img-fluid" alt="Images" />
+                    <img src="images/phto3.PNG" class="lazyload  img-fluid" alt="Images" />
                   </a>
               </div>
 

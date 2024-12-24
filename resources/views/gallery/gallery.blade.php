@@ -67,8 +67,8 @@
 
           <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
             <li><a href="{{url('/')}}">الصفحة الرئسية</a></li>
-            <li><a href="{{url('/courses')}}">الدورات</a></li>
-            <li><a href="{{url('/staff')}}">طاقم العمل</a></li>
+            {{-- <li><a href="{{url('/courses')}}">الدورات</a></li>
+            <li><a href="{{url('/staff')}}">طاقم العمل</a></li> --}}
             <li><a href="{{url('/news')}}">أخبار</a></li>
             <li><a href="{{url('/about')}}">خدمات</a></li>
             <li><a href="{{url('/contact')}}">اتصال بنا</a></li>
@@ -96,7 +96,7 @@
     </div>
   </nav>
   
-  <div class="untree_co-hero overlay" style="background-image: url('images/img-school-4-min.jpg');">
+  <div class="untree_co-hero overlay" style="background-image: url('');">
     <div class="container">
       <div class="row align-items-center justify-content-center">
         <div class="col-12">

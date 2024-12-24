@@ -21,23 +21,45 @@ class DetailsController extends Controller
         return view('courses.playlist.playlist', compact('courses'));
     }
     // في دالة videoplay
+    // DetailsController.php
+
+    // DetailsController.php
+
     public function videoplay($id)
     {
         $course = Course::findOrFail($id);
-        // تعيين المتغير videoSrc إلى المسار الصحيح للفيديو الافتراضي
-        $videoSrc = $course->course_video;
-        return view('courses.videoplayer.videopalyer', compact('course', 'videoSrc'));
+        // Decode the playlist_videos column from JSON
+        $playlistVideos = json_decode($course->playlist_videos, true);
+
+        // If decoding fails, set an empty array as a fallback
+        if ($playlistVideos === null || !is_array($playlistVideos)) {
+            $playlistVideos = [];
+        }
+
+        // Set the default video source (if there is a video in the playlist)
+        $videoSrc = isset($playlistVideos[0]) ? asset("storage/{$playlistVideos[0]}") : '';
+
+        return view('courses.videoplayer.videopalyer', compact('course', 'videoSrc', 'playlistVideos'));
     }
 
-    // في دالة show
     public function show($id, $video = null)
     {
         $course = Course::findOrFail($id);
 
-        // إذا تم تحديد الفيديو من الرابط، قم بتعيين مصدر الفيديو
-        $videoSrc = $video ? $video : $course->course_video;
+        // Decode the playlist_videos column from JSON
+        $playlistVideos = json_decode($course->playlist_videos, true);
 
-        return view('coursesM.show', compact('course', 'videoSrc'));
+        // If decoding fails, set an empty array as a fallback
+        if ($playlistVideos === null || !is_array($playlistVideos)) {
+            $playlistVideos = [];
+        }
+
+        // Determine the video source
+        $videoSrc = $video
+            ? asset("storage/{$video}")
+            : (isset($playlistVideos[0]) ? asset("storage/{$playlistVideos[0]}") : '');
+
+        return view('courses.videoplayer.videopalyer', compact('course', 'videoSrc', 'playlistVideos'));
     }
 
 }

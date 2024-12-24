@@ -1,7 +1,7 @@
 @extends('master.master')
 
 @section('content')
-<div class="untree_co-hero overlay" style="background-image: url('{{ asset('images/img-school-1-min.jpg') }}');">
+<div class="untree_co-hero overlay" style="background-image: url('{{ asset('images/hero4.png') }}');">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12">

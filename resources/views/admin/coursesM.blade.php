@@ -32,7 +32,7 @@
                 <input type="number" class="form-control" id="course_price" name="course_price" required>
             </div>
             <div class="form-group">
-                <label for="course_details">تفاصيل الدورة</label>
+                <label for="course_details">Course details</label>
                 <textarea class="form-control" id="course_details" name="course_details" rows="3"></textarea>
             </div>
             

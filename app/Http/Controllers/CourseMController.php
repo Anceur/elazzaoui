@@ -32,8 +32,8 @@ class CourseMController extends Controller
             'course_desc' => 'nullable|string',
             'course_details' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'course_video' => 'nullable|mimes:mp4,mov,avi|max:102400',
-            'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:102400',
+            'course_video' => 'nullable|mimes:mp4,mov,avi|max:1048576',
+            'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:1048576',
         ]);
 
         // رفع الصورة
@@ -64,7 +64,8 @@ class CourseMController extends Controller
 
             'course_photo' => $photoPath,
             'course_video' => $videoPath,
-            'playlist_videos' => $playlistVideos,
+            'playlist_videos' => json_encode($playlistVideos),
+
         ]);
 
         return redirect()->route('coursesM')->with('success', 'Course created successfully.');
@@ -87,34 +88,21 @@ class CourseMController extends Controller
             'course_teacher' => 'required|string|max:255',
             'course_price' => 'required|numeric',
             'course_desc' => 'nullable|string',
-            'course_details' => 'nullable|string', // التحقق باستخدام الاسم الجديد
+            'course_details' => 'nullable|string',
             'course_photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'course_video' => 'nullable|mimes:mp4,mov,avi|max:102400',
-            'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:102400',
+            'course_video' => 'nullable|mimes:mp4,mov,avi|max:1048576',
+            'playlist_videos.*' => 'nullable|mimes:mp4,mov,avi|max:1048576',
         ]);
 
-        // رفع الصورة
-        if ($request->hasFile('course_photo')) {
-            if ($course->course_photo) {
-                Storage::delete('public/' . $course->course_photo);
-            }
-            $photoPath = $request->file('course_photo')->store('course_photos', 'public');
-        } else {
-            $photoPath = $course->course_photo;
-        }
+        $photoPath = $request->file('course_photo')
+            ? $request->file('course_photo')->store('course_photos', 'public')
+            : $course->course_photo;
 
-        // رفع الفيديو الرئيسي
-        if ($request->hasFile('course_video')) {
-            if ($course->course_video) {
-                Storage::delete('public/' . $course->course_video);
-            }
-            $videoPath = $request->file('course_video')->store('course_videos', 'public');
-        } else {
-            $videoPath = $course->course_video;
-        }
+        $videoPath = $request->file('course_video')
+            ? $request->file('course_video')->store('course_videos', 'public')
+            : $course->course_video;
 
-        // رفع قائمة الفيديوهات
-        $playlistVideos = $course->playlist_videos ?? [];
+        $playlistVideos = json_decode($course->playlist_videos, true) ?? [];
         if ($request->hasFile('playlist_videos')) {
             foreach ($request->file('playlist_videos') as $video) {
                 $playlistVideos[] = $video->store('playlist_videos', 'public');
@@ -129,11 +117,12 @@ class CourseMController extends Controller
             'course_details' => $request->input('course_details'),
             'course_photo' => $photoPath,
             'course_video' => $videoPath,
-            'playlist_videos' => $playlistVideos,
+            'playlist_videos' => json_encode($playlistVideos),
         ]);
 
         return redirect()->route('coursesM')->with('success', 'Course updated successfully.');
     }
+
 
     // حذف الدورة
     public function destroy($id)
