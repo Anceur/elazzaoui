@@ -40,7 +40,7 @@
                     <div class="address mt-4">
                         <i class="icon-room"></i>
                         <h4 class="mb-2">الموقع:</h4>
-                        <p>910، لندن</p>
+                        <p>Rue Meskine Bachir, Frenda</p>
                     </div>
 
                     <div class="open-hours mt-4">
@@ -52,13 +52,13 @@
                     <div class="email mt-4">
                         <i class="icon-envelope"></i>
                         <h4 class="mb-2">البريد الإلكتروني:</h4>
-                        <p>info@Untree.co</p>
+                        <p>contact@elazzaoui-school.com</p>
                     </div>
 
                     <div class="phone mt-4">
                         <i class="icon-phone"></i>
                         <h4 class="mb-2">الاتصال:</h4>
-                        <p>+1 1234 55488 55</p>
+                        <p>+213 773175202</p>
                     </div>
                 </div>
             </div>

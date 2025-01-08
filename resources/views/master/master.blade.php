@@ -150,11 +150,11 @@
             <h3>يتصل</h3>
             <ul class="list-unstyled social">
               <li><a href="https://instagram.com/el_azzaoui_school"><span class="icon-instagram"></span></a></li>
-              <li><a href="#"><span class="icon-twitter"></span></a></li>
+              {{-- <li><a href="#"><span class="icon-twitter"></span></a></li> --}}
               <li><a href="https://www.facebook.com/@ElAzzaouiSchool"><span class="icon-facebook"></span></a></li>
-              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              {{-- <li><a href="#"><span class="icon-linkedin"></span></a></li>
               <li><a href="#"><span class="icon-pinterest"></span></a></li>
-              <li><a href="#"><span class="icon-dribbble"></span></a></li>
+              <li><a href="#"><span class="icon-dribbble"></span></a></li> --}}
             </ul>
           </div> <!-- /.widget -->
         </div> <!-- /.col-lg-3 -->
@@ -171,9 +171,8 @@
             <h3>اتصال</h3>
             <address>Rue Meskine Bachir, Frenda</address>
             <ul class="list-unstyled links mb-4">
-              <li><a href="tel://11234567890">+213</a></li>
-              <li><a href="tel://11234567890">+213</a></li>
-              <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+              <li><a>+213773175202</a></li>
+              <li><a href="mailto:contact@elazzaoui-school.com">contact@elazzaoui-school.com</a></li>
             </ul>
           </div> <!-- /.widget -->
         </div> <!-- /.col-lg-3 -->
@@ -182,7 +181,7 @@
 
       <div class="row mt-5">
         <div class="col-12 text-center">
-          <p class="copyright">Copyright &copy; All Rights Reserved</a> 
+          <p class="copyright">Copyright &copy; ECOLE ELAZZAOUI</a> 
           </div>
         </div>
       </div> <!-- /.container -->

@@ -112,10 +112,10 @@
       <br>
 
           <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
-            <li>دراسة عن بعد</li>
+            {{-- <li>دراسة عن بعد</li>
             <li>اختبار لغة مجاني</li>
-            <li>دورات عبر الانترنت</li>
-            <li>اضافة الى شهادات واعتمادات احترافية</li>
+            <li>دورات عبر الانترنت</li> --}}
+            <li> شهادات واعتمادات احترافية</li>
           </ul>
 
           <p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">إحصل عليه</a></p>
@@ -126,7 +126,7 @@
     </div>
   </div>
 
-
+{{-- 
   <div class="untree_co-section_ex">
     <div class="container">
       <div class="row justify-content-center mb-3">
@@ -186,7 +186,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
   
@@ -264,7 +264,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
         <div class="col-lg-7">
-          <h2 class="text-white mb-3" data-aos="fade-up" data-aos-delay="0">اختبر مستواك اللغوي معنا! </h2>
+          <h2 class="text-white mb-3" data-aos="fade-up" data-aos-delay="0">مؤسستنا</h2>
           <p class="text-white h5 mb-4" data-aos="fade-up" data-aos-delay="100">نؤمن بأن التعليم هو المفتاح لتشكيل قادة الغد. في مؤسستنا، نقدم برامج تعليمية متقدمة تركز على تنمية المهارات القيادية والتفكير النقدي لدى الطلاب. نعمل على تحفيزهم على الابتكار وتطوير قدراتهم على حل المشكلات، مما يعدهم لمواجهة التحديات المستقبلية. من خلال تجارب تعليمية متنوعة ومناهج تفاعلية، نسعى إلى تعزيز القيم الأساسية مثل التعاون، والمسؤولية، والمبادرة. نحن نؤمن بأن قادة الغد هم أولئك الذين يتمتعون بالمعرفة والثقة لإحداث تأثير إيجابي في مجتمعاتهم</p>
           <p><a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">سجل الآن</a></p>
         </div>
