@@ -2034,6 +2034,11 @@
 .icon-map:before {
   content: "\f279";
 }
+
+.icon-services:before {
+  content: "\f275"; /* Use the desired Unicode from your list */
+}
+
 .icon-commenting:before {
   content: "\f27a";
 }

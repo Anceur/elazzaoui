@@ -41,12 +41,13 @@ class DetailsController extends Controller
 
         return view('courses.videoplayer.videopalyer', compact('course', 'videoSrc', 'playlistVideos'));
     }
-
+ 
     public function show($id, $video = null)
     {
         $course = Course::findOrFail($id);
 
-        // Decode the playlist_videos column from JSON
+        // Decode the playlist_videos column from JSON 
+        
         $playlistVideos = json_decode($course->playlist_videos, true);
 
         // If decoding fails, set an empty array as a fallback

@@ -76,7 +76,7 @@ a {
   color: #ffffff; }
 
 .text-primary {
-  color: #136ad5 !important; }
+  color: #2f84ec !important; }
 
 a.text-primary {
   color: #136ad5 !important; }
@@ -131,6 +131,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   justify-content: center;
   gap: 30px;
 }
+
+
+
+
+
+
+
+
+
 
 .form-control, .custom-select {
   border: none;
@@ -1945,3 +1954,86 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         color: #ffffff; }
   .site-footer .copyright {
     color: rgba(255, 255, 255, 0.5); }
+
+
+    /* General Styling */
+.container-xxl {
+  padding: 3rem 1rem;
+}
+
+.service-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item .p-4 {
+  padding: 1.5rem;
+}
+
+.service-item i {
+  font-size: 3rem;
+  color: #2f84ec; /* Primary color for icons */
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.service-item:hover i {
+  color: #2f84ec; /* Darker shade on hover */
+}
+
+.service-item h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .service-item {
+      margin-bottom: 1.5rem;
+  }
+
+  .service-item .p-4 {
+      padding: 1rem;
+  }
+
+  .service-item i {
+      font-size: 2.5rem;
+  }
+
+  .service-item h5 {
+      font-size: 1.1rem;
+  }
+
+  .service-item p {
+      font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-item i {
+      font-size: 2rem;
+  }
+
+  .service-item h5 {
+      font-size: 1rem;
+  }
+
+  .service-item p {
+      font-size: 0.8rem;
+  }
+}

@@ -19,8 +19,12 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@capacitor/android": "^6.2.0",
+        "@capacitor/cli": "^6.2.0",
+        "@capacitor/core": "^6.2.0",
         "bootstrap": "^5.3.3",
-        "bootstrap-icons": "^1.11.3"
+        "bootstrap-icons": "^1.11.3",
+        "swiper": "^11.2.1"
     },
     "name": "elazzoui_school",
     "version": "1.0.0",
