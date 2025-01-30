@@ -48,9 +48,9 @@
 {{-- section2 --}}
 
 
-<div class="untree_co-section" style="    padding-bottom: 90px;     padding-top: 70px;">
+<div class="untree_co-section" style="padding-top: 70px;">
   <div class="container">
-    <div class="row justify-content-center mb-5">
+    <div class="row-card justify-content-center mb-5">
       <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
         <h2 class="line-bottom text-center mb-4" style="font-family: 'Almarai', serif;">
           لماذا تجتاز اختبار تحديد المستوى اللغوي؟
@@ -58,7 +58,7 @@
 
       </div>
     </div>
-    <div class="row">
+    <div class="row-card" style="gap: 20px">
       <!-- أيقونة التخرج -->
       <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="feature text-center">
@@ -109,15 +109,169 @@
 
 {{-- section 3 --}}
 
+
+
+
+
+
+<div class="services-section">
+  <div class="container">
+
+
+
+
+    <div class="e-card playing">
+      <div class="image">
+        <img src="images/cefr-logo.png" alt="Card Image" style="position: relative;
+    z-index: 1;" />
+      </div>
+
+
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+
+      <div class="infotop">
+        <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1350.000000 1350.000000" height="250" width="250"
+          xmlns="http://www.w3.org/2000/svg" version="1.0">
+          <g stroke="none" fill="#00ff80" transform="translate(0.000000,1350.000000) scale(0.100000,-0.100000)">
+
+          </g>
+        </svg>
+      </div>
+    </div>
+
+
+
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+        <h2 class="line-bottom text-center mb-4" style="font-family: 'Almarai', serif;">
+          على ماذا نعتمد في اختباراتنا
+        </h2>
+        <p>
+
+          في العزاوي سكول، نعتمد الإطار الأوروبي المرجعي العام للغات (CEFR) لتصنيف
+          المستويات اللغوية، مع التركيز على تطوير المهارات الأربعة الأساسية (الاستماع، التحدث، القراءة، الكتابة)،
+          بالإضافة إلى إتقان القواعد (Grammar)، لضمان تعليم متكامل ومهني يلبي احتياجات جميع المتعلمين.
+
+
+
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row-card">
+      <!-- Card for A1 Level -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="level-circle">A1</div>
+          <div class="infotopp-card">
+            <h3>مبتدئ A1</h3>
+            <p>بداية رحلتك اللغوية بتعلم التعابير الأساسية مثل التحيات، التعريف بالنفس، والتواصل في مواقف يومية
+              بسيطة.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for A2 Level -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="level-circle">A2</div>
+          <div class="infotopp-card">
+            <h3>ماقبل المتوسط A2</h3>
+            <p>تطوير فهم العبارات والجمل المتعلقة بالحياة اليومية والعمل، مع القدرة على الحديث عن الروتين
+              والاحتياجات الشخصية.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for B1 Level -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="level-circle">B1</div>
+          <div class="infotopp-card">
+            <h3>متوسط B1</h3>
+            <p>القدرة على التعامل مع مواقف معقدة نسبيًا، مثل الحديث عن تجاربك وأهدافك، كتابة رسائل رسمية، والمشاركة
+              في نقاشات.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for B1 Level -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="level-circle">B1</div>
+          <div class="infotopp-card">
+            <h3>مستوى مافوق المتوسط B1</h3>
+            <p>
+
+
+              تحقيق طلاقة في التحدث والنقاش حول مواضيع متنوعة، مع تحسين الدقة اللغوية باستخدام القواعد المعقدة مثل
+              أسلوب الربط بين الجمل، المبني للمجهول، والصيغ الشرطية المتقدمة.
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for B1 Level -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="level-circle">C1</div>
+          <div class="infotopp-card">
+            <h3>المستوى المتقدم C1</h3>
+            <p>
+
+              استخدام اللغة بمرونة ودقة للتعبير عن أفكارك في المواضيع الأكاديمية والمهنية، مع فهم التفاصيل الدقيقة
+              في النصوص المعقدة. في هذا المستوى، يتم تعلم تراكيب الجمل المعقدة، الاستخدام الرسمي للغة، والصيغ
+              المتخصصة.
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for B1 Level -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="level-circle">C2</div>
+          <div class="infotopp-card">
+            <h3>مستوى الإتقان C2</h3>
+            <P>
+              إتقان شامل للغة والقواعد، مما يتيح التحدث والكتابة بطلاقة تعكس فهمًا عميقًا للغة، بما يشمل أدق
+              التفاصيل والتعابير الضمنية.
+            </P>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{{--
 <div class="unslate_co--section" id="about-section">
   <div class="container">
 
     <div class="row mt-5 justify-content-between" style="text-align: right">
       <div class="col-lg-4 pr-lg-5">
         <h3 class="mb-4 heading-h3" data-aos="fade-right">نبذة عنّا<span></span></h3>
-        <p class="mb-4" data-aos="fade-right">في العزاوي سكول، نعتمد الإطار الأوروبي المرجعي العام للغات (CEFR) لتصنيف
+        <p class="mb-4" data-aos="fade-right">
+
+
+
+          في العزاوي سكول، نعتمد الإطار الأوروبي المرجعي العام للغات (CEFR) لتصنيف
           المستويات اللغوية، مع التركيز على تطوير المهارات الأربعة الأساسية (الاستماع، التحدث، القراءة، الكتابة)،
-          بالإضافة إلى إتقان القواعد (Grammar)، لضمان تعليم متكامل ومهني يلبي احتياجات جميع المتعلمين.</p>
+          بالإضافة إلى إتقان القواعد (Grammar)، لضمان تعليم متكامل ومهني يلبي احتياجات جميع المتعلمين.
+
+
+        </p>
         <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
           <li>A1 مستوى مبتدئ </li>
           <li>A2 مستوى المتوسط</li>
@@ -134,7 +288,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
 
 {{-- end section 3 --}}

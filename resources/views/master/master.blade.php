@@ -31,6 +31,7 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
 
@@ -53,6 +54,9 @@
   <link rel="stylesheet" href="{{ asset('css/playlist.css') }}">
   <link rel="stylesheet" href="{{ asset('css/videoplayer.css') }}">
   <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/news.css') }}">
+
+
 
 
 
@@ -87,15 +91,26 @@
 
   <nav class="site-nav mb-5">
     <div class="pb-2 top-bar mb-3">
-      <div class="container">
+      <div class="container" style="display: flex;justify-content:space-between;">
+        {{--
+        <div class="phone-icon-container" style="text-align: right;">
+          <i class="fas fa-phone" id="phone-icon" style="color: #fff; cursor: pointer; font-size: 20px;"></i>
+          <div class="phone-dropdown" id="phone-dropdown"
+            style="display: none; background-color: #fff; border: 1px solid #ccc; position: absolute;">
+            <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+            <p><a href="tel:+9876543210">+9 876 543 210</a></p>
+            <p><a href="tel:+1122334455">+1 122 334 455</a></p>
+          </div>
+        </div> --}}
 
-        <div class="date-container" style="text-align: right">
+        <div class="date-container" style="text-align: left">
           <span style="right: 0; padding-right: 20px; color: #fff; font-size: 14px; font-weight: light;"
             id="current-date"></span>
         </div>
 
       </div>
     </div>
+
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
@@ -143,6 +158,7 @@
           تسجيل الدخول
           </a>
         </li>
+
 
         <li>
           <a href="{{ url('/register') }}">
@@ -282,8 +298,42 @@
       $logo.attr('src', '{{ asset('images/logo1.png') }}');
     }
   });
-</script>
+</script> 
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // فتح النافذة المنبثقة
+    const buttons = document.querySelectorAll(".btn-donate");
+    buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const popupId = this.getAttribute("data-popup");
+        const popup = document.getElementById(popupId);
+        if (popup) {
+          popup.style.display = "flex";
+        }
+      });
+    });
+
+    // إغلاق النافذة المنبثقة
+    const closeButtons = document.querySelectorAll(".close-btn");
+    closeButtons.forEach((closeBtn) => {
+      closeBtn.addEventListener("click", function () {
+        const popup = this.closest(".popup");
+        if (popup) {
+          popup.style.display = "none";
+        }
+      });
+    });
+
+    // إغلاق النافذة عند النقر خارجها
+    window.addEventListener("click", function (event) {
+      if (event.target.classList.contains("popup")) {
+        event.target.style.display = "none";
+      }
+    });
+  });
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -438,6 +488,14 @@
     // Initialize
     updateSlidePosition();
   });
+
+
+  document.getElementById('phone-icon').addEventListener('click', function () {
+    var dropdown = document.getElementById('phone-dropdown');
+    dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+  });
+
+
 </script>
 
 </body>

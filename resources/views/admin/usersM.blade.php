@@ -1,13 +1,13 @@
 @if(Auth::user()->usertype == 'admin')
-@extends('adminlte::page')
+    @extends('adminlte::page')
 
-@section('title', 'Manage Users')
+    @section('title', 'Manage Users')
 
-@section('content_header')
+    @section('content_header')
     <h1>Manage Users</h1>
-@stop
+    @stop
 
-@section('content')
+    @section('content')
     <div class="container">
         @if (session('success'))
             <div class="alert alert-success">
@@ -23,11 +23,35 @@
             @endif
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ isset($user) ? $user->name : '' }}" required>
+                <input type="text" class="form-control" id="name" name="name" value="{{ isset($user) ? $user->name : '' }}"
+                    required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{ isset($user) ? $user->email : '' }}" required>
+                <input type="email" class="form-control" id="email" name="email"
+                    value="{{ isset($user) ? $user->email : '' }}" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone"
+                    value="{{ isset($user) ? $user->phone : '' }}" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" value="{{ isset($user) ? $user->age : '' }}"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="selected_option">Option</label>
+                <select class="form-control" id="selected_option" name="selected_option" required>
+                    <option value="" disabled {{ !isset($user) ? 'selected' : '' }}>Select an option</option>
+                    <option value="Option1" {{ isset($user) && $user->selected_option == 'Option1' ? 'selected' : '' }}>Option
+                        1</option>
+                    <option value="Option2" {{ isset($user) && $user->selected_option == 'Option2' ? 'selected' : '' }}>Option
+                        2</option>
+                    <option value="Option3" {{ isset($user) && $user->selected_option == 'Option3' ? 'selected' : '' }}>Option
+                        3</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
@@ -47,6 +71,11 @@
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
+                    <th>Age</th>
+                    <th>program</th>
+                    <th>Option</th>
+                    <th>time</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -55,12 +84,18 @@
                     <tr>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>{{ $user->phone }}</td>
+                        <td>{{ $user->age }}</td>
+                        <td>{{ $user->program}}</td>
+                        <td>{{ $user->created_at}}</td>
+                        <td>{{ $user->selected_option }}</td>
                         <td>
                             <a href="{{ route('usersM.edit', $user->id) }}" class="btn btn-primary btn-sm">Edit</a>
                             <form action="{{ route('usersM.destroy', $user->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
+                                <button type="submit" class="btn btn-danger btn-sm"
+                                    onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -68,10 +103,9 @@
             </tbody>
         </table>
     </div>
-@stop
+    @stop
 
-@section('js')
+    @section('js')
     <script> console.log("User management page loaded."); </script>
-@stop
+    @stop
 @endif
-

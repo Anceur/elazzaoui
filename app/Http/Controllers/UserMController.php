@@ -21,12 +21,20 @@ class UserMController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
+            'phone' => 'nullable|string|max:15',       // التحقق من الهاتف
+            'age' => 'nullable|integer|min:1|max:120', // التحقق من العمر
+            'program' => 'nullable|string|max:255',
+            'selected_option' => 'nullable|string|max:255', // التحقق من الخيار
         ]);
 
         User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
+            'phone' => $request->input('phone'),
+            'age' => $request->input('age'),
+            'program' => $request->input('program'),
+            'selected_option' => $request->input('selected_option'),
         ]);
 
         return redirect()->route('usersM')->with('success', 'User created successfully.');
@@ -47,11 +55,21 @@ class UserMController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $id,
             'password' => 'nullable|string|min:8|confirmed',
+            'phone' => 'nullable|string|max:15',       // التحقق من الهاتف
+            'age' => 'nullable|integer|min:1|max:120', // التحقق من العمر
+            'program' => 'nullable|string|max:255',
+
+            'selected_option' => 'nullable|string|max:255', // التحقق من الخيار
         ]);
 
         $user = User::findOrFail($id);
         $user->name = $request->input('name');
         $user->email = $request->input('email');
+        $user->phone = $request->input('phone');
+        $user->age = $request->input('age');
+        $user->program = $request->input('program');
+
+        $user->selected_option = $request->input('selected_option');
 
         // Update password if provided
         if ($request->input('password')) {

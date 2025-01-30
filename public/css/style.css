@@ -466,6 +466,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 
 
+.phone-dropdown a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.phone-dropdown a:hover {
+  color: #007bff;
+}
 
 
 /*PRELOADING------------ */
@@ -1808,6 +1818,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   position: absolute;
   width: 100%;
   left: 50%;
+  top: 300px;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }

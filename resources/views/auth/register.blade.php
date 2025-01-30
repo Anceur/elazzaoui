@@ -23,13 +23,13 @@
                 <form method="POST" action="{{ route('register') }}" class="form-box" style="text-align: right;">
                     @csrf
 
-               
 
-                      {{-- Name Field --}}
+
+                    {{-- Name Field --}}
                     <div class="mb-3">
-                        <x-label for="name" value="الاسم" />
+                        <x-label for="name" value="الاسم واللقب" />
                         <x-input id="name" class="form-control mt-1 w-full" type="text" name="name" :value="old('name')"
-                            required autofocus autocomplete="name" placeholder="اسم المستخدم" />
+                            required autofocus autocomplete="name" placeholder="اسم كامل" style="text-align: right" />
                         @error('name')
                             <span class="text-danger" style="font-size: 0.9rem;">{{ 'حقل الاسم مطلوب.' }}</span>
                         @enderror
@@ -39,7 +39,8 @@
                     <div class="mb-3">
                         <x-label for="email" value="البريد الإلكتروني" />
                         <x-input id="email" class="form-control mt-1 w-full" type="email" name="email"
-                            :value="old('email')" required autocomplete="username" placeholder="البريد الإلكتروني" />
+                            :value="old('email')" required autocomplete="username" placeholder="البريد الإلكتروني"
+                            style="text-align: right" />
                         @error('email')
                             <span class="text-danger" style="font-size: 0.9rem;">{{ 'حقل البريد الإلكتروني مطلوب.' }}</span>
                         @enderror
@@ -49,7 +50,7 @@
                     <div class="mb-3">
                         <x-label for="password" value="كلمة المرور" />
                         <x-input id="password" class="form-control mt-1 w-full" type="password" name="password" required
-                            autocomplete="new-password" placeholder="********" />
+                            autocomplete="new-password" placeholder="********" style="text-align: right" />
                         @error('password')
                             <span class="text-danger"
                                 style="font-size: 0.9rem;">{{ 'يجب أن يحتوي حقل كلمة المرور على 8 أحرف على الأقل.' }}</span>
@@ -60,11 +61,87 @@
                     <div class="mb-3">
                         <x-label for="password_confirmation" value="تأكيد كلمة المرور" />
                         <x-input id="password_confirmation" class="form-control mt-1 w-full" type="password"
-                            name="password_confirmation" required autocomplete="new-password" placeholder="********" />
+                            name="password_confirmation" required autocomplete="new-password" placeholder="********"
+                            style="text-align: right" />
                         @error('password_confirmation')
                             <span class="text-danger" style="font-size: 0.9rem;">{{ 'يجب تأكيد كلمة المرور.' }}</span>
                         @enderror
                     </div>
+
+
+                    <div class="mb-3">
+                        {{-- Phone Number Field --}}
+                        <x-label for="phone" value="رقم الهاتف" />
+                        <x-input id="phone" class="form-control mt-1 w-full" type="text" name="phone" required
+                            placeholder="رقم الهاتف" style="text-align: right" />
+                        @error('phone')
+                            <span class="text-danger" style="font-size: 0.9rem;">{{ 'حقل رقم الهاتف مطلوب.' }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        {{-- Age Selection --}}
+                        <x-label for="age" value="الفئة العمرية" />
+                        <select id="age" name="age" class="form-control mt-1 w-full" onchange="updateOptions()"
+                            style="text-align: right">
+                            <option value="">اختر الفئة العمرية</option>
+                            <option value="صغير">صغير</option>
+                            <option value="متوسط">متوسط</option>
+                            <option value="كبير">كبير</option>
+                        </select>
+                        @error('age')
+                            <span class="text-danger" style="font-size: 0.9rem;">{{ 'يرجى اختيار الفئة العمرية.' }}</span>
+                        @enderror
+                    </div>
+
+                    <div id="options-container" class="mb-3" style="display: none;">
+                        <x-label for="program" value="العناصر المتاحة" style="text-align: right;" />
+                        <select id="dynamic-options" name="program" class="form-control mt-1 w-full"
+                            style="text-align: right;">
+                            <option value="">اختر برنامجك</option>
+                        </select>
+                        @error('program')
+                            <span class="text-danger"
+                                style="font-size: 0.9rem; text-align: right;">{{ 'يرجى اختيار برنامج.' }}</span>
+                        @enderror
+                    </div>
+
+                    <script>
+                        function updateOptions() {
+                            const age = document.getElementById('age').value; // Get the selected value
+                            const optionsContainer = document.getElementById('options-container');
+                            const dynamicSelect = document.getElementById('dynamic-options');
+
+                            // Clear the current options
+                            dynamicSelect.innerHTML = '<option value="" style="text-align: right;">اختر برنامجك</option>';
+
+                            // Define the new options based on the selected age group
+                            let items = [];
+                            if (age === 'صغير') {
+                                items = ['جدول الضرب', 'اللغة الانجليزية'];
+                            } else if (age === 'متوسط') {
+                                items = ['اللغة الفرنسية', 'اللغة الانجليزية'];
+                            } else if (age === 'كبير') {
+                                items = ['اللغة الفرنسية', 'اللغة الانجليزية', 'اللغة الاسبانية', 'اللغة الالمانية', 'اللغة التركية'];
+                            }
+
+                            // Populate the select dropdown with new options
+                            if (items.length > 0) {
+                                items.forEach(item => {
+                                    const option = document.createElement('option');
+                                    option.value = item;
+                                    option.textContent = item;
+                                    option.style.textAlign = 'right'; // Ensure right alignment for each option
+                                    dynamicSelect.appendChild(option);
+                                });
+                                optionsContainer.style.display = 'block';
+                            } else {
+                                optionsContainer.style.display = 'none';
+                            }
+                        }
+                    </script>
+
+
 
                     {{-- Terms and Privacy Policy (if enabled) --}}
                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -85,10 +162,10 @@
 
                     {{-- Submit Button --}}
                     <div class="d-flex flex-column align-items-center mt-4">
-                        <x-button class="btn btn-primary w-100">
+                        <x-button class="btn btn-primary w-100 text-center mx-auto" style="display: block;">
                             تسجيل
                         </x-button>
-                        <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-3"
+                        <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-3 text-center"
                             href="{{ route('login') }}">
                             هل قمت بالتسجيل بالفعل؟
                         </a>
@@ -98,4 +175,7 @@
         </div>
     </div>
 </div>
+
+
+
 @endsection

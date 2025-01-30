@@ -5,10 +5,9 @@ font-family: 'Almarai', serif;
 
 } 
 
+
 .slider-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 120%;
     position: relative;
 }
 
@@ -57,20 +56,18 @@ font-family: 'Almarai', serif;
     transition: transform 0.5s ease-in-out;
     gap: 20px;
     width: max-content;
-}
-
-.slide {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}.slide {
     flex: 0 0 calc(10.333% - 14px);
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-}
-
-.slide:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .slide img {
@@ -83,60 +80,197 @@ font-family: 'Almarai', serif;
 .slide-content {
     padding: 20px;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.slide-content h3 {
-    margin: 0 0 10px;
+/* Flex container for price-rating and text */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Price & rating on the left */
+.price-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+/* Rating */
+.rating {
+    font-size: 14px;
+    color: gold;
+    direction: ltr;
+}
+
+/* Title & Description (Right side) */
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    max-width: 70%;
+}
+
+/* Title */
+.text-wrapper h3 {
+    margin: 0;
     font-size: 18px;
     color: #333;
     font-weight: 700;
 }
 
-.slide-content p {
-    margin: 0;
-    color: #666;
-    line-height: 1.5;
+/* Description */
+.text-wrapper p {
+    margin: 5px 0 0;
     font-size: 14px;
+    color: #666;
+    line-height: 1.4;
 }
 
+/* Button */
+.btn-donate {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: hsla(194 100% 69% / 1);
+    --btn-bg-2: hsla(217 100% 56% / 1);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(
+      325deg,
+      var(--btn-bg-2) 0%,
+      var(--btn-bg-1) 55%,
+      var(--btn-bg-2) 90%
+    );
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow:
+      0px 0px 20px rgba(71, 184, 255, 0.5),
+      0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+      inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+      inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donate:hover {
+    background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--btn-bg-color),
+      0 0 0 6px var(--btn-bg-2);
+}
+
+
 .slider-button {
-    position: absolute;
+    /* position: absolute; */
     top: 50%;
+    
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background: transparent;
     cursor: pointer;
     z-index: 2;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     font-size: 20px;
     color: #333;
     transition: all 0.3s ease;
-}
-
-.slider-button:hover {
-    background: #f8f8f8;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev-button {
-    right: 10px;
-}
-
-.next-button {
-    left: 10px;
-}
+  }
+  
+  .slider-button .button-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    padding: 8px 20px;
+    color: #fff;
+    background-image: linear-gradient(145deg, #2575fc, #2575fc);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    transition: transform 0.3s, border-radius 0.3s, background 10s;
+  }
+  
+  .slider-button:active .button-top {
+    border-radius: 10px 10px 8px 8px / 8px;
+    transform: translateY(2px);
+    background-image: linear-gradient(145deg, #2575fc, #2575fc);
+  }
+  
+  .slider-button .button-bottom {
+    position: absolute;
+    z-index: 1;
+    bottom: 4px;
+    left: 4px;
+    border-radius: 20px;
+    padding-top: 6px;
+    width: calc(100% - 8px);
+    height: calc(100% - 10px);
+    background-image: linear-gradient(145deg, #2575fc, #2575fc);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    transition: border-radius 0.2s, padding-top 0.2s;
+  }
+  
+  .slider-button .button-base {
+    position: absolute;
+    z-index: 0;
+    top: 4px;
+    left: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: calc(100% - 4px);
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 2px rgba(0, 0, 0, 0.25);
+    transition: border-radius 0.2s, padding-top 0.2s;
+  }
+  
+  .slider-button:active .button-bottom {
+    border-radius: 10px 10px 8px 8px / 8px;
+    padding-top: 0;
+  }
+  
+  .slider-button:active .button-base {
+    border-radius: 10px 10px 8px 8px / 8px;
+  }
+  
+  /* Positioning */
+  .prev-button {
+    left: 10px; /* Positioned on the left */
+  }
+  
+  .next-button {
+    right: 10px; /* Positioned on the right */
+  }
+  
+  .slider-container {
+    position: relative;
+    justify-content: center;
+  }
+  
 
 .slider-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .dot {
@@ -149,9 +283,167 @@ font-family: 'Almarai', serif;
 }
 
 .dot.active {
-    background: #333;
+    background: #2575fc;
     transform: scale(1.2);
 }
+
+/* From Uiverse.io by Allyhere */ 
+/* .btn-donate {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: hsla(194 100% 69% / 1);
+    --btn-bg-2: hsla(217 100% 56% / 1);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(
+      325deg,
+      var(--btn-bg-2) 0%,
+      var(--btn-bg-1) 55%,
+      var(--btn-bg-2) 90%
+    );
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow:
+      0px 0px 20px rgba(71, 184, 255, 0.5),
+      0px 5px 5px -1px rgba(58, 125, 233, 0.25),
+      inset 4px 4px 8px rgba(175, 230, 255, 0.5),
+      inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+  }
+  
+  .btn-donate:hover {
+    background-position: right top;
+  }
+  
+  .btn-donate:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--btn-bg-color),
+      0 0 0 6px var(--btn-bg-2);
+  } */
+
+  /* Popup Styles */
+.popup {
+    display: none; /* مخفية في البداية */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية شبه شفافة */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+ /* تحسين تصميم النافذة المنبثقة */
+ .popup-content {
+    background: linear-gradient(145deg, #f9f9f9, #e0e0e0); /* تدرج لوني للخلفية */
+    padding: 30px;
+    border-radius: 20px; /* حدود دائرية */
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* ظل للنافذة */
+    border: 2px solid #fff; /* حدود بيضاء */
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* ظل للصورة */
+}
+
+.popup-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* تصميم الثمن */
+.price {
+    display: inline-block;
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 8px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.3);
+    margin-bottom: 5px;
+}
+
+/* زر الإغلاق */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8); /* خلفية شبه شفافة */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* ظل للزر */
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 1); /* خلفية بيضاء عند التمرير */
+    color: #000;
+}
+  
+/* WhatsApp Button Styles */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* WhatsApp green color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); /* Shadow for the button */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+.whatsapp-btn i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+  @media (prefers-reduced-motion: reduce) {
+    .btn-donate {
+      transition: linear;
+    }
+  }
+
+  
+  
 
 /* Large Tablets and Small Desktops */
 @media (max-width: 1200px) {
@@ -222,11 +514,11 @@ font-family: 'Almarai', serif;
     }
     
     .slide {
-        flex: 0 0 calc(10% - 10px);
+        flex: 0 0 calc(7% - 10px);
     }
     
     .slider-wrapper {
-        padding: 0 35px;
+        padding: 0 15px;
     }
     
     .slider-button {
@@ -262,7 +554,7 @@ font-family: 'Almarai', serif;
 /* Extra Small Phones */
 @media (max-width: 375px) {
     .slider-wrapper {
-        padding: 0 30px;
+        padding: 0 15px;
     }
     
     .slider-button {

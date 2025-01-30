@@ -20,6 +20,11 @@ return new class extends Migration {
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+            $table->string('phone')->nullable(); // Add phone number field
+            $table->string('age')->nullable();   // Add age field
+            $table->string('program')->nullable();
+
+            $table->string('selected_option')->nullable(); // Add field for dynamic options
             $table->timestamps();
         });
 
@@ -47,5 +52,11 @@ return new class extends Migration {
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn(['phone', 'age', 'selected_option']); // Remove added fields
+        });
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('program');
+        });
     }
 };

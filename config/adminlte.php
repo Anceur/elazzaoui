@@ -387,21 +387,9 @@ return [
             'icon_color' => 'red',
             'url' => '/admin/users',
         ],
-        [
-            'text' => 'Staff',
-            'icon_color' => 'yellow',
-            'url' => '/admin/team',
-        ],
-        [
-            'text' => 'Courses',
-            'icon_color' => 'cyan',
-            'url' => '/admin/courses',
-        ],
-        [
-            'text' => 'Teachers',
-            'icon_color' => 'green',
-            'url' => '/admin/teacher',
-        ],
+
+
+
     ],
 
     /*
