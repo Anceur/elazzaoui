@@ -3,7 +3,8 @@
 @section('content')
 
 
-<div class="untree_co-hero overlay" style="background-image: url('images/hero6.png'); background-position: 70%;">
+<div class="untree_co-hero overlay" style="background-image: url('images/hero6.png'); background-position: 70%; "
+  loading="lazy">
 
 
   <div class="container">
@@ -163,7 +164,7 @@
 {{-- section 5 --}}
 
 
-<div class="untree_co-hero overlay" style="background-image: url('images/hero2.png'); ">
+<div class="untree_co-hero overlay" style="background-image: url('images/hero2.png'); " loading="lazy">
   <div class="container">
     <div class="row align-items-center justify-content-center text-center">
       <div class="col-lg-7">
@@ -692,7 +693,7 @@
                 والتميزوشكرا لكم على مجهوداتكم سي علي ميسوم
               </p>
               <div class="author">
-                <img src="images/ay.png" alt="Free template by TemplateUX">
+                <img src="images/ay.png" alt="Free template by TemplateUX" >
                 <h3>ر.أية
 
                 </h3>

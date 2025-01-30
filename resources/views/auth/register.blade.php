@@ -1,7 +1,18 @@
 @extends('master.master')
 
+<style>
+    .error-message {
+        color: red;
+        font-size: 0.85rem;
+        margin-top: 5px;
+        display: block;
+    }
+</style>
+
+
+
 @section('content')
-<div class="untree_co-hero inner-page overlay" style="background-image: url('images/hero2.png');">
+<div class="untree_co-hero inner-page overlay" style="background-image: url('images/hero2.png');" loading="lazy">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12">
@@ -170,6 +181,35 @@
                             هل قمت بالتسجيل بالفعل؟
                         </a>
                     </div>
+
+                    <script>
+                        document.querySelector('form').addEventListener('submit', function (event) {
+                            let isValid = true;
+                            const fields = document.querySelectorAll('input[required], select[required]');
+
+                            fields.forEach(field => {
+                                if (!field.value.trim()) {
+                                    isValid = false;
+                                    field.classList.add('is-invalid'); // إضافة كلاس للخطأ
+                                    const errorMessage = document.createElement('div');
+                                    errorMessage.className = 'text-danger';
+                                    errorMessage.style.fontSize = '0.9rem';
+                                    errorMessage.textContent = 'يجب ملء هذا الحقل.';
+                                    field.parentElement.appendChild(errorMessage);
+                                } else {
+                                    field.classList.remove('is-invalid'); // إزالة كلاس الخطأ إذا كان الحقل مملوءًا
+                                    const existingError = field.parentElement.querySelector('.text-danger');
+                                    if (existingError) {
+                                        existingError.remove();
+                                    }
+                                }
+                            });
+
+                            if (!isValid) {
+                                event.preventDefault(); // منع إرسال النموذج إذا كان هناك حقول فارغة
+                            }
+                        });
+                    </script>
                 </form>
             </div>
         </div>

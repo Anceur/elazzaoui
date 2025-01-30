@@ -2,7 +2,7 @@
 @section('content')
 
 {{-- section1 --}}
-<div class="untree_co-hero overlay" style="background-image: url('images/hero2.png');">
+<div class="untree_co-hero overlay" style="background-image: url('images/hero2.png');" loading="lazy">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-12">
@@ -160,7 +160,7 @@
 
           <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
 
-            <a href="images/phto4.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
+            <a href="images/phto4.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
               {{-- data-caption="Watch" --}}
               <div class="overlay">
                 <span class="wrap-icon icon-photo2"></span>
@@ -169,14 +169,14 @@
                   <p>branding, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto4.PNG" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto4.jpg" class="lazyload  img-fluid" alt="Images" />
             </a>
 
           </div>
 
           <div class="item web packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
 
-            <a href="images/phto5.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
+            <a href="images/phto5.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
               <div class="overlay">
                 <span class="wrap-icon icon-photo2"></span>
                 <div class="portfolio-item-content">
@@ -184,13 +184,13 @@
                   <p>web, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto5.PNG" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto5.jpg" class="lazyload  img-fluid" alt="Images" />
             </a>
 
           </div>
 
           <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="images/phto6.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
+            <a href="images/phto6.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
               <div class="overlay">
                 <span class="wrap-icon icon-photo2"></span>
                 <div class="portfolio-item-content">
@@ -198,12 +198,12 @@
                   <p>illustration, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto6.PNG" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto6.jpg" class="lazyload  img-fluid" alt="Images" />
             </a>
           </div>
 
           <div class="item illustration packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="images/phto1.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
+            <a href="images/phto1.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
               <div class="overlay">
                 <span class="wrap-icon icon-photo2"></span>
                 <div class="portfolio-item-content">
@@ -211,12 +211,12 @@
                   <p>web, branding</p> --}}
                 </div>
               </div>
-              <img src="images/phto1.PNG" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto1.jpg" class="lazyload  img-fluid" alt="Images" />
             </a>
           </div>
 
           <div class="item branding packaging col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="images/phto2.PNG" class="portfolio-item item-portrait isotope-item gsap-reveal-img"
+            <a href="images/phto2.jpg" class="portfolio-item item-portrait isotope-item gsap-reveal-img"
               data-fancybox="gallery">
               <div class="overlay">
                 <span class="wrap-icon icon-photo2"></span>
@@ -225,7 +225,7 @@
                   <p>branding, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto2.PNG" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto2.jpg" class="lazyload  img-fluid" alt="Images" />
             </a>
           </div>
           {{--
@@ -244,7 +244,7 @@
           </div> --}}
 
           <div class="item web illustration col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a href="images/phto3.PNG" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
+            <a href="images/phto3.jpg" class="portfolio-item isotope-item gsap-reveal-img" data-fancybox="gallery">
               <div class="overlay">
                 <span class="wrap-icon icon-photo2"></span>
                 <div class="portfolio-item-content">
@@ -252,7 +252,7 @@
                   <p>web, illustration</p> --}}
                 </div>
               </div>
-              <img src="images/phto3.PNG" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto3.jpg" class="lazyload  img-fluid" alt="Images" />
             </a>
           </div>
 

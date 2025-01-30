@@ -1,7 +1,7 @@
 @extends('master.master')
 
 @section('content')
-<div class="untree_co-hero inner-page overlay" style="background-image: url('images/hero2.png');">
+<div class="untree_co-hero inner-page overlay" style="background-image: url('images/hero2.png');" loading="lazy">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-12">

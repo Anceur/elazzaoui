@@ -3,7 +3,7 @@
 
 
 
-<div class="untree_co-hero overlay" style="background-image: url('images/hero4.png');">
+<div class="untree_co-hero overlay" style="background-image: url('images/hero4.png');" loading="lazy">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12">

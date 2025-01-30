@@ -15,33 +15,46 @@
   <meta name="author" content="ANCEUR Boumedienne Yassine ,BOUROKBA Mohamed Aimen , MAHTOUT Ali Missoum">
   <meta name="robots" content="">
 
+  <!-- Preconnect to Google Fonts and other CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://unicons.iconscout.com">
+  <link rel="preconnect" href="https://fonts.bunny.net">
 
+  <!-- Preload essential fonts and CSS -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap"
+    as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+    as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" as="style">
 
+  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Display+Playfair:wght@400;700&family=Inter:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
-
-
-
+  <!-- Unicons CSS -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <link rel="manifest" href="{{ asset('manifest.json') }}">
 
-  <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+  <!-- Swiper CSS (Preload) -->
+  <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.css" as="style">
+  <link rel="preload" href="https://unpkg.com/swiper/swiper-bundle.min.js" as="script" defer>
+
+  <!-- Manifest and local styles -->
+  <link rel="manifest" href="{{ asset('manifest.json') }}">
   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
@@ -49,23 +62,12 @@
   <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
   <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
   <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
   <link rel="stylesheet" href="{{ asset('css/playlist.css') }}">
   <link rel="stylesheet" href="{{ asset('css/videoplayer.css') }}">
   <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
   <link rel="stylesheet" href="{{ asset('css/news.css') }}">
 
-
-
-
-
-
-
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
   <!-- Scripts -->
   @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -114,8 +116,9 @@
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
         <div class="site-navigation text-center">
-          <a href="{{url('/')}}" class="logo menu-absolute m-0">
-            <img src="{{ asset('images/logo1.png') }}" alt="Logo" id="img-logo" style="width: 90px;">
+          <a href="{{ url('/') }}" class="logo menu-absolute m-0">
+            <img rel="preload" src="{{ asset('images/logo1.png') }}" alt="Logo" id="img-logo" style="width: 90px;"
+              loading="lazy">
           </a>
 
 
@@ -252,19 +255,27 @@
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-  <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
-  <script src="{{ asset('js/popper.min.js') }}"></script>
-  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
-  <script src="{{ asset('js/jquery.sticky.js') }}"></script>
-  <script src="{{ asset('js/aos.js') }}"></script>
-  <script src="{{ asset('js/custom.js') }}"></script>
-  <script src="{{ asset('js/main.js') }}"></script>
-  <script src="{{ asset('js/scripts.js') }}"></script>
-  <script src="{{ asset('js/scripts-dist.js') }}"></script>
+  <script src="{{ asset('js/jquery-3.4.1.min.js') }}" defer></script>
+  <script src="{{ asset('js/popper.min.js') }}" defer></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}" defer></script>
+  <script src="{{ asset('js/jquery.animateNumber.min.js') }}" defer></script>
+  <script src="{{ asset('js/jquery.waypoints.min.js') }}" defer></script>
+  <script src="{{ asset('js/jquery.fancybox.min.js') }}" defer></script>
+  <script src="{{ asset('js/jquery.sticky.js') }}" defer></script>
+  <script src="{{ asset('js/aos.js') }}" defer></script>
+  <script src="{{ asset('js/custom.js') }}" defer></script>
+  <script src="{{ asset('js/main.js') }}" defer></script>
+  <script src="{{ asset('js/scripts.js') }}" defer></script>
+  <script src="{{ asset('js/scripts-dist.js') }}" defer></script>
+  <script src="{{ asset('js/register.js') }}" defer></script>
+  <script src="{{ asset('js/service.js') }}" defer></script>
+  <script src="{{ asset('js/slider.js') }}" defer></script>
+  <script src="{{ asset('js/logo-toggle.js') }}" defer></script>
+
+
+
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -286,217 +297,22 @@
 </body>
 
 
+
+
 <script>
   $(window).on('scroll', function () {
-    var $logo = $("#img-logo"); // Ensure your logo has this ID
+    var $logo = $("#img-logo"); // تأكد من أن الشعار يحتوي على هذا الـ ID
 
     if ($(window).scrollTop() > 0) {
-      // When the user scrolls down, change the logo to logo.png
+      // عند التمرير لأسفل، تغيير الصورة إلى logo.png
       $logo.attr('src', '{{ asset('images/logo.png') }}');
-    } else if ($(window).scrollTop() === 0) {
-      // When the user scrolls back up to the top, restore the original logo
+    } else {
+      // عند العودة إلى أعلى الصفحة، إعادة الصورة الأصلية
       $logo.attr('src', '{{ asset('images/logo1.png') }}');
     }
   });
-</script> 
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // فتح النافذة المنبثقة
-    const buttons = document.querySelectorAll(".btn-donate");
-    buttons.forEach((button) => {
-      button.addEventListener("click", function () {
-        const popupId = this.getAttribute("data-popup");
-        const popup = document.getElementById(popupId);
-        if (popup) {
-          popup.style.display = "flex";
-        }
-      });
-    });
-
-    // إغلاق النافذة المنبثقة
-    const closeButtons = document.querySelectorAll(".close-btn");
-    closeButtons.forEach((closeBtn) => {
-      closeBtn.addEventListener("click", function () {
-        const popup = this.closest(".popup");
-        if (popup) {
-          popup.style.display = "none";
-        }
-      });
-    });
-
-    // إغلاق النافذة عند النقر خارجها
-    window.addEventListener("click", function (event) {
-      if (event.target.classList.contains("popup")) {
-        event.target.style.display = "none";
-      }
-    });
-  });
 </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slide');
-    const dotsContainer = document.querySelector('.slider-dots');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-
-    // Clone slides for infinite loop
-    const slidesToClone = Array.from(slides);
-    slidesToClone.forEach(slide => {
-      const clone = slide.cloneNode(true);
-      track.appendChild(clone);
-    });
-
-    let currentPosition = 0;
-    const slideCount = slides.length;
-    let isTransitioning = false;
-
-    // Create dots
-    for (let i = 0; i < slideCount; i++) {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => goToSlide(i));
-      dotsContainer.appendChild(dot);
-    }
-
-    function getSlideWidth() {
-      return slides[0].offsetWidth + 20; // 20px for gap
-    }
-
-    function updateSlidePosition(withTransition = true) {
-      if (!withTransition) {
-        track.style.transition = 'none';
-      } else {
-        track.style.transition = 'transform 0.5s ease-in-out';
-      }
-
-      const translateValue = currentPosition * getSlideWidth();
-      track.style.transform = `translateX(${translateValue}px)`;
-
-      // Update dots
-      const normalizedPosition = Math.abs(currentPosition % slideCount);
-      document.querySelectorAll('.dot').forEach((dot, index) => {
-        dot.classList.toggle('active', index === normalizedPosition);
-      });
-    }
-
-    function goToSlide(index) {
-      if (isTransitioning) return;
-      isTransitioning = true;
-      currentPosition = -index;
-      updateSlidePosition();
-
-      setTimeout(() => {
-        isTransitioning = false;
-      }, 500);
-    }
-
-    function nextSlide() {
-      if (isTransitioning) return;
-      isTransitioning = true;
-
-      currentPosition--;
-      updateSlidePosition();
-
-      if (currentPosition <= -slideCount) {
-        setTimeout(() => {
-          currentPosition = 0;
-          updateSlidePosition(false);
-          isTransitioning = false;
-        }, 500);
-      } else {
-        setTimeout(() => {
-          isTransitioning = false;
-        }, 500);
-      }
-    }
-
-    function prevSlide() {
-      if (isTransitioning) return;
-      isTransitioning = true;
-
-      currentPosition++;
-      updateSlidePosition();
-
-      if (currentPosition > 0) {
-        setTimeout(() => {
-          currentPosition = -(slideCount - 1);
-          updateSlidePosition(false);
-          isTransitioning = false;
-        }, 500);
-      } else {
-        setTimeout(() => {
-          isTransitioning = false;
-        }, 500);
-      }
-    }
-
-    // Event Listeners
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-
-    // Auto play
-    let autoPlayInterval = setInterval(nextSlide, 5000);
-
-    track.addEventListener('mouseenter', () => {
-      clearInterval(autoPlayInterval);
-    });
-
-    track.addEventListener('mouseleave', () => {
-      autoPlayInterval = setInterval(nextSlide, 5000);
-    });
-
-    // Touch Events
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    track.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      clearInterval(autoPlayInterval);
-    }, { passive: true });
-
-    track.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-      autoPlayInterval = setInterval(nextSlide, 5000);
-    }, { passive: true });
-
-    function handleSwipe() {
-      const difference = touchStartX - touchEndX;
-      if (Math.abs(difference) > 50) {
-        if (difference > 0) {
-          nextSlide();
-        } else {
-          prevSlide();
-        }
-      }
-    }
-
-    // Handle window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        updateSlidePosition(false);
-      }, 250);
-    });
-
-    // Initialize
-    updateSlidePosition();
-  });
-
-
-  document.getElementById('phone-icon').addEventListener('click', function () {
-    var dropdown = document.getElementById('phone-dropdown');
-    dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
-  });
-
-
-</script>
 
 </body>
 
