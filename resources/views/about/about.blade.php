@@ -15,8 +15,10 @@
                 تجربتكم التعليمية.</p>
             </div>
 
-            <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-secondary">استكشاف
-                الدورات</a></p>
+
+            <p><a href="{{url('/register')}}" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">سجل
+                الآن</a>
+            </p>
 
           </div>
 
@@ -35,7 +37,7 @@
 
 <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
 
-  <div class="untree_co-section" id="services-section">
+  <div class="untree_co-section" id="services-section" style="padding-top: 60px;">
     <div class="container">
 
       <div class="section-heading-wrap text-center mb-5">
@@ -47,7 +49,8 @@
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
             <div class="wrap-icon mb-3 flex justify-content-center">
               <img class="services-img" src="images/svg/translator.png" alt="Image" width="25%"
-                data-gif="images/svg/translator.gif" style="align-items: center; text-align: center ; justify-content: center">
+                data-gif="images/svg/translator.gif"
+                style="align-items: center; text-align: center ; justify-content: center">
             </div>
             <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">دورات اللغات<br>الأجنبية</h2>
             <p>دورات لتعلم اللغات الأجنبية من المستوى المبتدئ حتى المتقدم، تشمل أيضًا ورشات للمستويات المتقدمة لتحسين
@@ -90,7 +93,8 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
             <div class="wrap-icon mb-3 flex justify-content-center">
-              <img class="services-img" src="images/svg/book.png" alt="Image" width="25%" data-gif="images/svg/book.gif">
+              <img class="services-img" src="images/svg/book.png" alt="Image" width="25%"
+                data-gif="images/svg/book.gif">
             </div>
             <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">مكتبة للقراءة <br> والمطالعة</h2>
             <p>مكتبة تحتوي على أكثر من 300 عنوان مختلف، متاحة للاستعارة من قبل الطلاب لدعم التعليم المستمر وتوسيع

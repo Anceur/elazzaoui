@@ -49,9 +49,10 @@
           </div>
 
           <div class="d-flex flex-column justify-content-end mt-4" style="text-align: center">
-            <x-button class="btn btn-primary" style="text-align: center !important">
+            <x-button class="btn btn-primary w-50 mx-auto d-block" style="text-align: center;">
               {{ __('تسجل') }}
             </x-button>
+
             @if (Route::has('password.request'))
         <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 me-3"
           href="{{ route('password.request') }}">

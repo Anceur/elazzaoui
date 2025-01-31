@@ -200,45 +200,70 @@
     <div class="site-section">
       <div class="container">
 
-        
+
         <div class="row">
 
           <div class="col-md pr-md-5 mb-4 mb-md-0">
             <h3>معلومات عنا</h3>
-            <p class="mb-4 text-align-right">نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي والابتكار. نقدم برامج متنوعة تشمل المواد الأساسية والدورات الخاصة.</p>
+            <p class="mb-4 text-align-right">نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي
+              والابتكار. نقدم برامج متنوعة تشمل المواد الأساسية والدورات الخاصة.</p>
             <ul class="list-unstyled quick-info mb-4">
-              <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 773 175 202</a></li>
-              <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
+              <li><a href="tel:+21346307174" class="d-flex align-items-center">
+                  <span class="icon mr-3 icon-phone"></span> +213 46 30 71 74</a></li>
+              <li><a href="tel:+213660979856" class="d-flex align-items-center">
+                  <span class="icon mr-3 icon-phone"></span> +213 660 979 856</a></li>
+              {{-- <li><a href="tel:+213660979857" class="d-flex align-items-center">
+                  <span class="icon mr-3 icon-phone"></span> +213 660 979 857</a></li> --}}
+              <li><a href="tel:+213660979865" class="d-flex align-items-center">
+                  <span class="icon mr-3 icon-phone"></span> +213 660 979 865</a></li>
+              <li><a href="mailto:contact@elazzaoui-school.com" class="d-flex align-items-center">
+                  <span class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
             </ul>
+
             <form action="#" class="subscribe">
               <input type="text" class="form-control" placeholder="أدخل بريدك الإلكتروني">
               <input type="submit" class="btn btn-submit" value="إرسال">
             </form>
           </div>
-          <div class="col-md mb-4 mb-md-0 text-align-right">
-            <h3>اخر الاخبار</h3>
-            <ul class="list-unstyled tweets">
-              <li class="d-flex">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde omnis veniam porro excepturi.</div>
-                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+          <div class="col-md mb-4 mb-md-0 text-center">
+            <h3>مواقع التواصل الاجتماعي</h3>
+            <ul class="list-unstyled social-posts">
+              <li class="d-flex justify-content-center align-items-center">
+                <div class="mr-2"><a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">تابعنا على تيك
+                    توك</a>
+                </div>
+                <div>
+                  <a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">
+                    <i class="fab fa-tiktok" style="color: #000;"></i>
+                  </a>
+                </div>
               </li>
-              <li class="d-flex">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde omnis veniam porro excepturi.</div>
-                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+
+
+              <li class="d-flex justify-content-center align-items-center">
+                <div class="mr-2"><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr"
+                    target="_blank">تابعنا على فيسبوك</a></div>
+                <div><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank"><span
+                      class="icon icon-facebook text-primary"></span></a></div>
               </li>
-              <li class="d-flex">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde omnis veniam porro excepturi.</div>
-                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+              <li class="d-flex justify-content-center align-items-center">
+                <div class="mr-2"><a href="https://www.instagram.com/el_azzaoui_school?igsh=ZTZtOXIwbGxxYnF5"
+                    target="_blank">تابعنا على
+                    إنستغرام</a>
+                </div>
+                <div><a href="https://www.instagram.com/el_azzaoui_school?igsh=ZTZtOXIwbGxxYnF5" target="_blank"><span
+                      class="icon icon-instagram text-danger"></span></a></div>
               </li>
             </ul>
           </div>
+
 
 
           <div class="col-md-3 mb-4 mb-md-0">
             <h3>الموقع الجغرافي</h3>
             <img href="#"><img src="{{ asset('images/map.png') }}" alt="Image" class="img-fluid"></img>
           </div>
-          
+
           <div class="col-12">
             <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
               <ul class="list-unstyled footer-menu mr-auto">
@@ -256,12 +281,12 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
   </footer>
-  
+
 
   <div id="overlayer"></div>
   <div class="loader">

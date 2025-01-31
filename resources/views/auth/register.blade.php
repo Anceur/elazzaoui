@@ -173,7 +173,8 @@
 
                     {{-- Submit Button --}}
                     <div class="d-flex flex-column align-items-center mt-4">
-                        <x-button class="btn btn-primary w-100 text-center mx-auto" style="display: block;">
+                        <x-button class="btn btn-primary w-50 mx-auto d-block text-center mx-auto"
+                            style="display: block;">
                             تسجيل
                         </x-button>
                         <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-3 text-center"
