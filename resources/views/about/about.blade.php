@@ -35,76 +35,75 @@
 
 <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
 
-  <div class="unslate_co--section" id="services-section">
+  <div class="untree_co-section" id="services-section">
     <div class="container">
 
       <div class="section-heading-wrap text-center mb-5">
-        <h2 class="heading-h2 text-center divider"><span>خدماتنا</span></h2>
-        <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+        <h2 class="line-bottom text-center mb-4" style="font-family: 'Almarai', serif;">خدماتنا</h2>
       </div>
 
-      <div class="row gutter-v3">
-        <div class="col-md-6 col-lg-4 mb-4">
+      <div class="row gutter-v3 text-center justify-content-center">
+        <div class="col-md-6 col-lg-4 mb-4 text-center justify-content-center">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-            <div class="wrap-icon mb-3 text-center">
-              <img class="services-img" src="images/svg/translator.png" alt="Image" width="45"
-                data-gif="images/svg/translator.gif">
+            <div class="wrap-icon mb-3 flex justify-content-center">
+              <img class="services-img" src="images/svg/translator.png" alt="Image" width="25%"
+                data-gif="images/svg/translator.gif" style="align-items: center; text-align: center ; justify-content: center">
             </div>
-            <h3>دورات اللغات<br>الأجنبية</h3>
+            <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">دورات اللغات<br>الأجنبية</h2>
             <p>دورات لتعلم اللغات الأجنبية من المستوى المبتدئ حتى المتقدم، تشمل أيضًا ورشات للمستويات المتقدمة لتحسين
               الطلاقة في التواصل</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-            <div class="wrap-icon mb-3">
-              <img class="services-img" src="images/svg/writing.png" alt="Icon" width="45"
+            <div class="wrap-icon mb-3 flex justify-content-center">
+              <img class="services-img" src="images/svg/writing.png" alt="Icon" width="25%"
                 data-gif="images/svg/writing.gif">
             </div>
-            <h3>ورشة تحسين<br>الخط</h3>
+            <h2 class="text-center mb-4" style="font-family: 'Almarai', serifh2">ورشة تحسين<br>الخط</h2>
             <p>ورشة كتابة للأطفال (6-10 سنوات):
               8 حصص شهريًا (ساعتان لكل حصة) لتحسين الخط والإملاء والتعبير الكتابي.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-            <div class="wrap-icon mb-3">
-              <img class="services-img" src="images/svg/abacus.png" alt="Image" class="img-fluid" width="45"
+            <div class="wrap-icon mb-3 flex justify-content-center">
+              <img class="services-img" src="images/svg/abacus.png" alt="Image" class="img-fluid" width="25%"
                 data-gif="images/svg/abacus.gif">
             </div>
-            <h3>دورات الحساب<br>الذهني</h3>
+            <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">دورات الحساب<br>الذهني</h2>
             <p>دورات لتعزيز القدرات الفكرية وتنمية الذاكرة والانتباه، موجهة للفئات العمرية الصغرى </p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
-            <div class="wrap-icon mb-3">
-              <img class="services-img" src="images/svg/achieve.png" alt="Image" width="45"
+            <div class="wrap-icon mb-3 flex justify-content-center">
+              <img class="services-img" src="images/svg/achieve.png" alt="Image" width="25%"
                 data-gif="images/svg/achieve.gif">
             </div>
-            <h3>جلسات فردية<br>للأهداف الخاصة</h3>
+            <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">جلسات فردية<br>للأهداف الخاصة</h2>
             <p>جلسات مخصصة لتحسين المهارات اللغوية أو التحضير لاختبارات اللغات الأجنبية، تُركز على احتياجاتكم الخاصة
               لضمان أفضل النتائج </p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
-            <div class="wrap-icon mb-3">
-              <img class="services-img" src="images/svg/book.png" alt="Image" width="45" data-gif="images/svg/book.gif">
+            <div class="wrap-icon mb-3 flex justify-content-center">
+              <img class="services-img" src="images/svg/book.png" alt="Image" width="25%" data-gif="images/svg/book.gif">
             </div>
-            <h3>مكتبة للقراءة <br> والمطالعة</h3>
+            <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">مكتبة للقراءة <br> والمطالعة</h2>
             <p>مكتبة تحتوي على أكثر من 300 عنوان مختلف، متاحة للاستعارة من قبل الطلاب لدعم التعليم المستمر وتوسيع
               المعرفة </p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-            <div class="wrap-icon mb-3">
-              <img class="services-img" src="images/svg/school.png" alt="Image" width="45"
+            <div class="wrap-icon mb-3 flex justify-content-center">
+              <img class="services-img" src="images/svg/school.png" alt="Image" width="25%"
                 data-gif="images/svg/school.gif">
             </div>
-            <h3>الموارد التكنولوجية<br>المتقدمة</h3>
+            <h2 class="text-center mb-4" style="font-family: 'Almarai', serif;">الموارد التكنولوجية<br>المتقدمة</h2>
             <p>نوفر أدوات وموارد تكنولوجية حديثة لدعم العملية التعليمية، مما يساعد في تحسين تجربة التعلم وتطوير المهارات
               باستخدام أحدث التقنيات </p>
           </div>
@@ -123,7 +122,7 @@
 
 
   <!-- END .counter -->
-  <div class="unslate_co--section" id="portfolio-section">
+  <div class="untree_co-section" id="portfolio-section">
     <div class="container">
 
 
@@ -137,8 +136,7 @@
       <div class="portfolio-wrapper">
 
         <div class="section-heading-wrap text-center mb-5">
-          <h2 class="heading-h2 text-center divider">الصور</span></h2>
-          <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+          <h2 class="line-bottom text-center mb-4" style="font-family: 'Almarai', serif;">الصور</h2>
         </div>
 
         {{-- <div class="d-flex align-items-center mb-4">

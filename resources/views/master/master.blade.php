@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <link rel="shortcut icon" href="favicon.png">
 
   <meta name="description" content=" العزاوي سكوول تعد من أولى منصات تعلم اللغات في الجزائر، متاحة للجميع، وتقدم الحل الأمثل لتعلم اللغات و بأسعار مناسبة. 
@@ -193,61 +195,73 @@
 
   @yield('content')
 
-  <div class="site-footer">
 
+  <footer class="footer-32892 pb-0">
+    <div class="site-section">
+      <div class="container">
 
-    <div class="container">
+        
+        <div class="row">
 
-      <div class="row">
-        <div class="col-lg-3 footer">
-          <div class="widget">
-            <h3>معلومات عنا<span class="text-primary">.</span> </h3>
-            <p>نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي والابتكار. نقدم برامج متنوعة تشمل
-              المواد الأساسية والدورات الخاصة</p>
-          </div> <!-- /.widget -->
-          <div class="widget">
-            <h3>يتصل</h3>
-            <ul class="list-unstyled social">
-              <li><a href="https://instagram.com/el_azzaoui_school"><span class="icon-instagram"></span></a></li>
-              {{-- <li><a href="#"><span class="icon-twitter"></span></a></li> --}}
-              <li><a href="https://www.facebook.com/@ElAzzaouiSchool"><span class="icon-facebook"></span></a></li>
-              {{-- <li><a href="#"><span class="icon-linkedin"></span></a></li>
-              <li><a href="#"><span class="icon-pinterest"></span></a></li>
-              <li><a href="#"><span class="icon-dribbble"></span></a></li> --}}
+          <div class="col-md pr-md-5 mb-4 mb-md-0">
+            <h3>معلومات عنا</h3>
+            <p class="mb-4 text-align-right">نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي والابتكار. نقدم برامج متنوعة تشمل المواد الأساسية والدورات الخاصة.</p>
+            <ul class="list-unstyled quick-info mb-4">
+              <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 773 175 202</a></li>
+              <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
             </ul>
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
-
-        <div class="col-lg-3 footer">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.8386418414375!2d1.0507685847580706!3d35.060773080343516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1280db04ca1fa525%3A0x171b9c190a2724f5!2zRWwgQXp6YW91aSBTY2hvb2wg2KfZhNi52LLYp9mI2Yog2LPZg9mI2YQ!5e0!3m2!1sar!2sdz!4v1728510404163!5m2!1sar!2sdz"
-            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        </div> <!-- /.col-lg-3 -->
-
-
-
-        <div class="col-lg-3 contact">
-          <div class="widget">
-            <h3>اتصال</h3>
-            <address>Rue Meskine Bachir, Frenda</address>
-            <ul class="list-unstyled links mb-4">
-              <li><a>+213773175202</a></li>
-              <li><a href="mailto:contact@elazzaoui-school.com">contact@elazzaoui-school.com</a></li>
+            <form action="#" class="subscribe">
+              <input type="text" class="form-control" placeholder="أدخل بريدك الإلكتروني">
+              <input type="submit" class="btn btn-submit" value="إرسال">
+            </form>
+          </div>
+          <div class="col-md mb-4 mb-md-0 text-align-right">
+            <h3>اخر الاخبار</h3>
+            <ul class="list-unstyled tweets">
+              <li class="d-flex">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde omnis veniam porro excepturi.</div>
+                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+              </li>
+              <li class="d-flex">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde omnis veniam porro excepturi.</div>
+                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+              </li>
+              <li class="d-flex">
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere unde omnis veniam porro excepturi.</div>
+                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+              </li>
             </ul>
-          </div> <!-- /.widget -->
-        </div> <!-- /.col-lg-3 -->
+          </div>
 
-      </div> <!-- /.row -->
 
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <p class="copyright">Copyright &copy; ECOLE ELAZZAOUI</a>
+          <div class="col-md-3 mb-4 mb-md-0">
+            <h3>الموقع الجغرافي</h3>
+            <img href="#"><img src="{{ asset('images/map.png') }}" alt="Image" class="img-fluid"></img>
+          </div>
+          
+          <div class="col-12">
+            <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+              <ul class="list-unstyled footer-menu mr-auto">
+                <li><a href="#">الصفحة الرئيسية</a></li>
+                <li><a href="#">إختبار المستوى اللغوي</a></li>
+                <li><a href="#">الخدمات</a></li>
+                <li><a href="#">اتصال بنا</a></li>
+                <li><a href="#">تسجيل الدخول</a></li>
+                <li><a href="#">يسجل</a></li>
+              </ul>
+              <div class="site-logo-wrap ml-auto">
+                <a href="#" class="site-logo">
+                  Elazzaoui
+                </a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
-    </div> <!-- /.container -->
-  </div> <!-- /.site-footer -->
+    </div>
+  </footer>
+  
 
   <div id="overlayer"></div>
   <div class="loader">

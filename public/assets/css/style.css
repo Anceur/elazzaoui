@@ -784,6 +784,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   .untree_co-section .heading strong {
     font-weight: 700; }
 
+
 .position-relative {
   position: relative; }
 
@@ -994,36 +995,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .meta {
   font-size: 14px;
   color: #ccc; }
-
-.video-play-btn {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  position: relative;
-  border-radius: 50%;
-  background: #136ad5;
-  color: #ffffff;
-  display: inline-block; }
-  .video-play-btn:before {
-    width: 90px;
-    height: 90px;
-    border: 2px solid #136ad5;
-    position: absolute;
-    content: "";
-    border-radius: 50%;
-    left: -5px;
-    top: -5px; }
-  .video-play-btn span {
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #ffffff;
-    -webkit-transform: translate(-40%, -50%);
-    -ms-transform: translate(-40%, -50%);
-    transform: translate(-40%, -50%); }
-  .video-play-btn:hover span {
-    color: #ffffff; }
 
 .block-testimonial p {
   font-size: 18px;
@@ -1493,35 +1464,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   position: relative;
   border-radius: 50%;
   background: #f8f9fa; }
-
-.video-wrap {
-  position: relative;
-  display: block; }
-  .video-wrap .play-wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease; }
-    .video-wrap .play-wrap > span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #ffffff;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-  .video-wrap:hover .play-wrap {
-    width: 60px;
-    height: 60px; }
 
 .owl-single.dots-absolute .owl-dots, .owl-carousel.dots-absolute .owl-dots {
   bottom: 40px; }

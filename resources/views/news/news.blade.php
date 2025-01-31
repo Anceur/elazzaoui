@@ -85,12 +85,13 @@
             مستمرًا ومُنسَّقًا. </p>
         </div>
       </div>
+      
       <!-- أيقونة التقنيات المبتكرة -->
       <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
         <div class="feature text-center">
           <span class="uil uil-lightbulb-alt"></span>
           <h2 class="line-bottom text-center mb-4" style="font-family: 'Almarai', serif;">
-            تحقيق أهدافك بثقة
+            تحقيق أهدافك بكل ثقة
 
           </h2>
 
@@ -122,14 +123,8 @@
 
     <div class="e-card playing">
       <div class="image">
-        <img src="images/cefr-logo.png" alt="Card Image" style="position: relative;
-    z-index: 1;" />
+        <img src="images/cefr-logo.png" alt="Card Image" style="position: relative;background-color: #2a6bf6;z-index: 1;" />
       </div>
-
-
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
 
       <div class="infotop">
         <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1350.000000 1350.000000" height="250" width="250"
