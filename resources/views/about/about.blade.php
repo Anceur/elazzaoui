@@ -171,7 +171,7 @@
                   <p>branding, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto4.jpg" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto4.jpg" class="lazyload  img-fluid" alt="Images" loading="lazy" />
             </a>
 
           </div>
@@ -186,7 +186,7 @@
                   <p>web, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto5.jpg" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto5.jpg" class="lazyload  img-fluid" alt="Images" loading="lazy" />
             </a>
 
           </div>
@@ -200,7 +200,7 @@
                   <p>illustration, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto6.jpg" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto6.jpg" class="lazyload  img-fluid" alt="Images" loading="lazy" />
             </a>
           </div>
 
@@ -213,7 +213,7 @@
                   <p>web, branding</p> --}}
                 </div>
               </div>
-              <img src="images/phto1.jpg" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto1.jpg" class="lazyload  img-fluid" alt="Images" loading="lazy" />
             </a>
           </div>
 
@@ -227,7 +227,7 @@
                   <p>branding, packaging</p> --}}
                 </div>
               </div>
-              <img src="images/phto2.jpg" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto2.jpg" class="lazyload  img-fluid" alt="Images" loading="lazy" />
             </a>
           </div>
           {{--
@@ -254,7 +254,7 @@
                   <p>web, illustration</p> --}}
                 </div>
               </div>
-              <img src="images/phto3.jpg" class="lazyload  img-fluid" alt="Images" />
+              <img src="images/phto3.jpg" class="lazyload  img-fluid" alt="Images" loading="lazy" />
             </a>
           </div>
 

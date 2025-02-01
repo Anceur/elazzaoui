@@ -71,7 +71,7 @@
     <div class="row justify-content-between">
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
         <figure class="img-wrap-2">
-          <img src="images/fan.png" alt="Image" class="img-fluid">
+          <img src="images/fan.png" alt="Image" class="img-fluid" loading="lazy">
           <div class="dotted"></div>
         </figure>
 
@@ -222,7 +222,7 @@
 
 
           <div class="slide">
-            <img src="images/imagetwo.png" alt="دورات اللغات">
+            <img src="images/imagetwo.png" alt="دورات اللغات" loading="lazy">
             <div class="slide-content">
               <div class="content-wrapper">
                 <!-- Price & Rating (Left) -->
@@ -247,7 +247,7 @@
 
 
           <div class="slide">
-            <img src="images/imageone.png" alt="ورشات تحفيظ">
+            <img src="images/imageone.png" alt="ورشات تحفيظ" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -272,7 +272,7 @@
 
 
           <div class="slide">
-            <img src="images/imagefour.png" alt="دورات الحساب">
+            <img src="images/imagefour.png" alt="دورات الحساب" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -297,7 +297,7 @@
 
 
           <div class="slide">
-            <img src="images/imagefour.png" alt="دورات الحساب">
+            <img src="images/imagefour.png" alt="دورات الحساب" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -320,7 +320,7 @@
 
 
           <div class="slide">
-            <img src="images/imagefive.png" alt="دورات الحساب">
+            <img src="images/imagefive.png" alt="دورات الحساب" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -347,7 +347,7 @@
           <!-- Slide 5 -->
 
           <div class="slide">
-            <img src="images/imagefive.png" alt="ورشات تحسين">
+            <img src="images/imagefive.png" alt="ورشات تحسين" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -372,7 +372,7 @@
 
 
           <div class="slide">
-            <img src="images/imagefive.png" alt="ورشات تحسين">
+            <img src="images/imagefive.png" alt="ورشات تحسين" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">

@@ -261,7 +261,7 @@
 
           <div class="col-md-3 mb-4 mb-md-0">
             <h3>الموقع الجغرافي</h3>
-            <img href="#"><img src="{{ asset('images/map.png') }}" alt="Image" class="img-fluid"></img>
+            <img href="#"><img src="{{ asset('images/map.png') }}" alt="Image" class="img-fluid" loading="lazy"></img>
           </div>
 
           <div class="col-12">

@@ -85,7 +85,7 @@
             مستمرًا ومُنسَّقًا. </p>
         </div>
       </div>
-      
+
       <!-- أيقونة التقنيات المبتكرة -->
       <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
         <div class="feature text-center">
@@ -123,7 +123,8 @@
 
     <div class="e-card playing">
       <div class="image">
-        <img src="images/cefr-logo.png" alt="Card Image" style="position: relative;background-color: #2a6bf6;z-index: 1;" />
+        <img src="images/cefr-logo.png" alt="Card Image"
+          style="position: relative;background-color: #2a6bf6;z-index: 1;" loading="lazy" />
       </div>
 
       <div class="infotop">
@@ -248,134 +249,6 @@
 
 
 
-
-
-{{--
-<div class="unslate_co--section" id="about-section">
-  <div class="container">
-
-    <div class="row mt-5 justify-content-between" style="text-align: right">
-      <div class="col-lg-4 pr-lg-5">
-        <h3 class="mb-4 heading-h3" data-aos="fade-right">نبذة عنّا<span></span></h3>
-        <p class="mb-4" data-aos="fade-right">
-
-
-
-          في العزاوي سكول، نعتمد الإطار الأوروبي المرجعي العام للغات (CEFR) لتصنيف
-          المستويات اللغوية، مع التركيز على تطوير المهارات الأربعة الأساسية (الاستماع، التحدث، القراءة، الكتابة)،
-          بالإضافة إلى إتقان القواعد (Grammar)، لضمان تعليم متكامل ومهني يلبي احتياجات جميع المتعلمين.
-
-
-        </p>
-        <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
-          <li>A1 مستوى مبتدئ </li>
-          <li>A2 مستوى المتوسط</li>
-          <li> C1 المستوى المتقدم </li>
-          <li> C2 مستوى الإتقان </li>
-
-
-          <p data-aos="fade-up"><a href="#" class="btn btn-outline-pill btn-custom-light">فريق العمل</a></p>
-      </div>
-      <div class="col-lg-7 mb-5 mb-lg-0">
-        <figure class="dotted-bg gsap-reveal-img ">
-          <img src="images/phto.png" alt="Image" class="img-fluid">
-        </figure>
-      </div>
-    </div>
-  </div>
-</div> --}}
-
-
-{{-- end section 3 --}}
-
-{{--
-<div class="untree_co-section bg-light">
-  <div class="container">
-    <div class="row align-items-stretch">
-      <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="media-h d-flex h-100">
-          <figure>
-            <img src="images/img-school-4-min.jpg" alt="صورة">
-          </figure>
-          <div class="media-h-body">
-            <h2 class="mb-3"><a href="#">التعليم لقادة الغد</a></h2>
-            <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span
-                class="icon-person mr-2"></span>Untree.co</div>
-            <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="media-h d-flex h-100">
-          <figure>
-            <img src="images/img-school-3-min.jpg" alt="صورة">
-          </figure>
-          <div class="media-h-body">
-            <h2 class="mb-3"><a href="#">سجّل أطفالك هذا الصيف واحصل على خصم 30%</a></h2>
-            <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span
-                class="icon-person mr-2"></span>Untree.co</div>
-            <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="media-h d-flex h-100">
-          <figure>
-            <img src="images/img-school-2-min.jpg" alt="صورة">
-          </figure>
-          <div class="media-h-body">
-            <h2 class="mb-3"><a href="#">التعليم لقادة الغد</a></h2>
-            <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span
-                class="icon-person mr-2"></span>Untree.co</div>
-            <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="media-h d-flex h-100">
-          <figure>
-            <img src="images/img-school-1-min.jpg" alt="صورة">
-          </figure>
-          <div class="media-h-body">
-            <h2 class="mb-3"><a href="#">سجّل أطفالك هذا الصيف واحصل على خصم 30%</a></h2>
-            <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span
-                class="icon-person mr-2"></span>Untree.co</div>
-            <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="media-h d-flex h-100">
-          <figure>
-            <img src="images/img-school-5-min.jpg" alt="صورة">
-          </figure>
-          <div class="media-h-body">
-            <h2 class="mb-3"><a href="#">التعليم لقادة الغد</a></h2>
-            <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span
-                class="icon-person mr-2"></span>Untree.co</div>
-            <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="media-h d-flex h-100">
-          <figure>
-            <img src="images/img-school-6-min.jpg" alt="صورة">
-          </figure>
-          <div class="media-h-body">
-            <h2 class="mb-3"><a href="#">سجّل أطفالك هذا الصيف واحصل على خصم 30%</a></h2>
-            <div class="meta"><span class="icon-calendar mr-2"></span><span>22 يونيو 2020</span> <span
-                class="icon-person mr-2"></span>Untree.co</div>
-            <p>بعيدًا، خلف جبال الكلمات، بعيدًا عن بلاد فوكاليا وكونسونانتيا، تعيش النصوص العمياء.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div> --}}
 
 
 
