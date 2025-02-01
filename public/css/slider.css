@@ -692,7 +692,7 @@ font-family: 'Almarai', serif;
     }
     
     .slider-wrapper {
-        padding: 0 15px;
+        padding: 0px 0px;
     }
     
     .slider-button {
@@ -728,7 +728,7 @@ font-family: 'Almarai', serif;
 /* Extra Small Phones */
 @media (max-width: 375px) {
     .slider-wrapper {
-        padding: 0 15px;
+        padding: 0px 0px ;
     }
     
     .slider-button {
