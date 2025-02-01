@@ -670,7 +670,7 @@
         <div class="swiper-slide">
           <div class="responsive-container-block content">
             <p class="text-blk quotes">“</p>
-            <img class="image-block profile-image" src="images/ay.png">
+            <img class="image-block profile-image" src="images/ay.png" alt="صورة شخصية">
             <p class="text-blk name">ر.أية</p>
             <p class="text-blk info">
               "بفضل مدرستكم وطاقمها اننا نلاحظ تقدما ملحوظا في الاقبال على تعلم اللغات الابناء فرندة مزيدا من التألق
@@ -681,7 +681,7 @@
         <div class="swiper-slide">
           <div class="responsive-container-block content">
             <p class="text-blk quotes">“</p>
-            <img class="image-block profile-image" src="images/baki.png">
+            <img class="image-block profile-image" src="images/baki.png" alt="صورة أخرى لفريق العمل">
             <p class="text-blk name">م. عبدالباقي</p>
             <p class="text-blk info">
               "مؤسسة عزاوي سكول استفاد أولادنا منها ونفتخر بها ونشكر كل الطاقم الإداري القائم عليها. كل الشكر والتقدير
@@ -692,7 +692,7 @@
         <div class="swiper-slide">
           <div class="responsive-container-block content">
             <p class="text-blk quotes">“</p>
-            <img class="image-block profile-image" src="images/am.png">
+            <img class="image-block profile-image" src="images/am.png" alt="صورة أخرى لفريق العمل">
             <p class="text-blk name">أ.امجد</p>
             <p class="text-blk info">
               "ولي ميعرفوهاش الناس أنكم بالإضافة للتعلم، كاين المعاملة لي يحظى بها التلميذ ولي تخلي عنده انطباع جميل
