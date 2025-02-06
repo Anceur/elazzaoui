@@ -94,26 +94,7 @@
 
 
   <nav class="site-nav mb-5">
-    <div class="pb-2 top-bar mb-3">
-      <div class="container" style="display: flex;justify-content:space-between;">
-        {{--
-        <div class="phone-icon-container" style="text-align: right;">
-          <i class="fas fa-phone" id="phone-icon" style="color: #fff; cursor: pointer; font-size: 20px;"></i>
-          <div class="phone-dropdown" id="phone-dropdown"
-            style="display: none; background-color: #fff; border: 1px solid #ccc; position: absolute;">
-            <p><a href="tel:+1234567890">+1 234 567 890</a></p>
-            <p><a href="tel:+9876543210">+9 876 543 210</a></p>
-            <p><a href="tel:+1122334455">+1 122 334 455</a></p>
-          </div>
-        </div> --}}
-
-        <div class="date-container" style="text-align: left">
-          <span style="right: 0; padding-right: 20px; color: #fff; font-size: 14px; font-weight: light;"
-            id="current-date"></span>
-        </div>
-
-      </div>
-    </div>
+   
 
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
@@ -137,7 +118,7 @@
             <li>
               <a href="{{ url('/news') }}">
                 <span class="icon-subject"></span>
-                إختبار المستوى اللغوي
+                إختبار المستوى
               </a>
             </li>
             <li>
@@ -160,7 +141,7 @@
         <li>
           <a href="{{ url('/login') }}">
           <span class="icon-lock"></span>
-          تسجيل الدخول
+           الدخول
           </a>
         </li>
 
@@ -168,7 +149,7 @@
         <li>
           <a href="{{ url('/register') }}">
           <span class="icon-person"></span>
-          يسجل
+          تسجيل
           </a>
         </li>
       @endguest
@@ -197,96 +178,78 @@
 
 
   <footer class="footer-32892 pb-0">
-    <div class="site-section">
+    <div class="site-section text-align-right" style="direction: rtl;">
       <div class="container">
-
-
         <div class="row">
-
+          <!-- About Section -->
           <div class="col-md pr-md-5 mb-4 mb-md-0">
-            <h3>معلومات عنا</h3>
-            <p class="mb-4 text-align-right">نحن مدرسة خاصة تركز على تقديم تعليم متميز يجمع بين التميز الأكاديمي
-              والابتكار. نقدم برامج متنوعة تشمل المواد الأساسية والدورات الخاصة.</p>
+            <h3 class="footer-heading text-center">معلومات عنا</h3>
             <ul class="list-unstyled quick-info mb-4">
-              <li><a href="tel:+21346307174" class="d-flex align-items-center">
-                  <span class="icon mr-3 icon-phone"></span> +213 46 30 71 74</a></li>
-              <li><a href="tel:+213660979856" class="d-flex align-items-center">
-                  <span class="icon mr-3 icon-phone"></span> +213 660 979 856</a></li>
-              {{-- <li><a href="tel:+213660979857" class="d-flex align-items-center">
-                  <span class="icon mr-3 icon-phone"></span> +213 660 979 857</a></li> --}}
-              <li><a href="tel:+213660979865" class="d-flex align-items-center">
-                  <span class="icon mr-3 icon-phone"></span> +213 660 979 865</a></li>
-              <li><a href="mailto:contact@elazzaoui-school.com" class="d-flex align-items-center">
-                  <span class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
+              <li><a href="tel:+21346307174" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 46 30 71 74</a></li>
+              <li><a href="tel:+213660979856" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 660 979 856</a></li>
+              <li><a href="tel:+213660979865" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 660 979 865</a></li>
+              <li><a href="mailto:contact@elazzaoui-school.com" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
             </ul>
-
             <form action="#" class="subscribe">
               <input type="text" class="form-control" placeholder="أدخل بريدك الإلكتروني">
               <input type="submit" class="btn btn-submit" value="إرسال">
             </form>
           </div>
+  
+          <!-- Social Media Section -->
           <div class="col-md mb-4 mb-md-0 text-center">
-            <h3>مواقع التواصل الاجتماعي</h3>
+            <h3 class="footer-heading">مواقع التواصل الاجتماعي</h3>
             <ul class="list-unstyled social-posts">
               <li class="d-flex justify-content-center align-items-center">
-                <div class="mr-2"><a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">تابعنا على تيك
-                    توك</a>
+                <div class="social-icon-circle">
+                  <a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
-                <div>
-                  <a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">
-                    <i class="fab fa-tiktok" style="color: #000;"></i>
-                  </a>
-                </div>
-              </li>
-
-
-              <li class="d-flex justify-content-center align-items-center">
-                <div class="mr-2"><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr"
-                    target="_blank">تابعنا على فيسبوك</a></div>
-                <div><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank"><span
-                      class="icon icon-facebook text-primary"></span></a></div>
+                <div class="mr-2"><a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">تابعنا على تيك توك</a></div>
               </li>
               <li class="d-flex justify-content-center align-items-center">
-                <div class="mr-2"><a href="https://www.instagram.com/el_azzaoui_school?igsh=ZTZtOXIwbGxxYnF5"
-                    target="_blank">تابعنا على
-                    إنستغرام</a>
+                <div class="social-icon-circle">
+                  <a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank"><span class="icon icon-facebook text-primary"></span></a>
                 </div>
-                <div><a href="https://www.instagram.com/el_azzaoui_school?igsh=ZTZtOXIwbGxxYnF5" target="_blank"><span
-                      class="icon icon-instagram text-danger"></span></a></div>
+                <div><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank">تابعنا على فيسبوك</a></div>
+              </li>
+              <li class="d-flex justify-content-center align-items-center">
+                <div class="social-icon-circle">
+                  <a href="https://www.instagram.com/el_azzaoui_school" target="_blank"><span class="icon icon-instagram text-danger"></span></a>
+                </div>
+                <div><a href="https://www.instagram.com/el_azzaoui_school" target="_blank">تابعنا على إنستغرام</a></div>
               </li>
             </ul>
           </div>
 
-
-
+  
+          <!-- Location Section -->
           <div class="col-md-3 mb-4 mb-md-0">
-            <h3>الموقع الجغرافي</h3>
-            <img href="#"><img src="{{ asset('images/map.png') }}" alt="Image" class="img-fluid" loading="lazy"></img>
+            <h3 class="footer-heading text-center">الموقع الجغرافي</h3>
+            <img src="{{ asset('images/map.png') }}" alt="Location Map" class="img-fluid" loading="lazy">
           </div>
-
+  
+          <!-- Footer Menu Section -->
           <div class="col-12">
-            <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
-              <ul class="list-unstyled footer-menu mr-auto">
-                <li><a href="#">الصفحة الرئيسية</a></li>
-                <li><a href="#">إختبار المستوى اللغوي</a></li>
-                <li><a href="#">الخدمات</a></li>
-                <li><a href="#">اتصال بنا</a></li>
-                <li><a href="#">تسجيل الدخول</a></li>
-                <li><a href="#">يسجل</a></li>
+            <div class="py-5 footer-menu-wrap d-md-flex align-items-center justify-content-space-between">
+              <ul class="list-unstyled footer-menu">
+                <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
+                <li><a href="{{ url('/news') }}">إختبار المستوى</a></li>
+                <li><a href="{{ url('/about') }}">الخدمات</a></li>
+                <li><a href="{{ url('/contact') }}">اتصال بنا</a></li>
+                <li><a href="{{ url('/login') }}">الدخول</a></li>
+                <li><a href="{{ url('/register') }}">تسجيل</a></li>
               </ul>
-              <div class="site-logo-wrap ml-auto">
-                <a href="#" class="site-logo">
-                  Elazzaoui
-                </a>
+              <div class="site-logo-wrap">
+                <a href="#"><img src="./images/logo1.png" class="site-logo"></a>
               </div>
             </div>
           </div>
-
+  
         </div>
       </div>
     </div>
   </footer>
-
+  
 
   <div id="overlayer"></div>
   <div class="loader">

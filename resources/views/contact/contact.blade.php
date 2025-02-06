@@ -50,7 +50,7 @@
                     <div class="open-hours mt-4">
                         <i class="icon-clock-o"></i>
                         <h4 class="mb-2">ساعات العمل:</h4>
-                        <p>الأحد-الجمعة: 11:00 صباحًا - 11:00 مساءً</p>
+                        <p> من الأحد-الجمعة <br>من 09:00 صباحًا - 17:00 مساءً</p>
                     </div>
 
                     <div class="email mt-4">
