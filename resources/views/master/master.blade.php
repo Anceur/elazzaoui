@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
 
   <meta name="description" content=" العزاوي سكوول تعد من أولى منصات تعلم اللغات في الجزائر، متاحة للجميع، وتقدم الحل الأمثل لتعلم اللغات و بأسعار مناسبة. 
 منصة واضحة ومنظَّمة مع تمارين تفاعلية تلبي احتياجاتك. 
@@ -77,7 +77,7 @@
   <!-- Styles -->
   @livewireStyles
 
-  <title>مدرسة العزاوي</title>
+  <title>مؤسسة العزاوي</title>
 </head>
 
 <body>

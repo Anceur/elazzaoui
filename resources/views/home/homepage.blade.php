@@ -186,10 +186,10 @@
 
         </p>
 
-
-
-        <p><a href="{{url('/register')}}" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">سجل الآن</a>
-        </p>
+        <div class="button-container">
+          <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="{{url('/register')}}"
+              class="btn btn-secondary">سجل الآن</a></p>
+        </div>
       </div>
     </div>
   </div>
@@ -250,7 +250,7 @@
 
 
           <div class="slide">
-            <img src="images/imagethree.png" alt="دورات الحساب" loading="lazy">
+            <img src="images/imagetwo.jpg" alt="دورات الحساب" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -275,7 +275,7 @@
 
 
           <div class="slide">
-            <img src="images/imageone.png" alt="ورشات تحفيظ" loading="lazy">
+            <img src="images/imagethree.png" alt="ورشات تحفيظ" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -348,7 +348,7 @@
           <!-- Slide 5 -->
 
           <div class="slide">
-            <img src="images/imagefive.png" alt="ورشات تحسين" loading="lazy">
+            <img src="images/imagesix.png" alt="ورشات تحسين" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -373,7 +373,7 @@
 
 
           <div class="slide">
-            <img src="images/imagefive.png" alt="ورشات تحسين" loading="lazy">
+            <img src="images/imageseven.png" alt="ورشات تحسين" loading="lazy">
 
             <div class="slide-content">
               <div class="content-wrapper">
@@ -767,8 +767,7 @@
     });
   </script>
   <script>
-    var opasite = document.querySelector('.swiper-slide');
-    var swiper = new Swiper('.mySwiper', {
+ var swiper = new Swiper('.mySwiper', {
   slidesPerView: 3,
   spaceBetween: 5,
   pagination: {
@@ -796,53 +795,39 @@
     prevEl: '.swiper-button-prev',
   },
   on: {
-    slideChange: function () {
-      // Adjust arrow positions based on the active slide
+    slideChangeTransitionEnd: function () {
       updateArrowPositions();
     },
     init: function () {
-      // Adjust arrows on init (in case the user directly lands on a certain slide)
       updateArrowPositions();
     }
   }
 });
 
-// Function to update arrow visibility and positioning
+// Function to update arrow visibility, positioning, and opacity
 function updateArrowPositions() {
-  const swiperWrapper = document.querySelector('.swiper-wrapper');
   const swiperSlides = document.querySelectorAll('.swiper-slide');
   const prevButton = document.querySelector('.swiper-button-prev');
   const nextButton = document.querySelector('.swiper-button-next');
 
-  // Get the width of the swiper container and the current slide
-  const slideWidth = swiperSlides[0].offsetWidth;
-  const swiperContainer = document.querySelector('.swiper-container');
-  const containerWidth = swiperContainer.offsetWidth;
-
-  // Make sure the arrows are positioned where the slider is (left and right)
-  if (swiper.isBeginning) {
-    prevButton.style.display = 'none';  // Hide left arrow if at the beginning
-  } else {
-    prevButton.style.display = 'block';
-  }
-
-  if (swiper.isEnd) {
-    nextButton.style.display = 'none';  // Hide right arrow if at the end
-  } else {
-    nextButton.style.display = 'block';
-  }
-  
-  // Position the arrows dynamically based on the slide position
+  // Get active slide index
   const activeIndex = swiper.realIndex;
   const activeSlide = swiperSlides[activeIndex];
 
-  // Position the left arrow just before the first slide
-  prevButton.style.left = activeSlide.offsetLeft + 'px';
-  nextButton.style.left = (activeSlide.offsetLeft + slideWidth - 20) + 'px'; // Adjust position for next button
-  // Remove opacity from the active slide and reset opacity for other slides
-  swiperSlides.forEach(slide => {
-  slide.style.opacity = slide === activeSlide ? '1' : '0.5';
+  // Adjust opacity for all slides
+  swiperSlides.forEach((slide, index) => {
+    slide.style.opacity = index === activeIndex ? '1' : '0.5';
   });
+
+  // Handle arrow visibility
+  prevButton.style.display = swiper.isBeginning ? 'none' : 'block';
+  nextButton.style.display = swiper.isEnd ? 'none' : 'block';
+
+  // Position the arrows dynamically based on the active slide
+  if (activeSlide) {
+    prevButton.style.left = activeSlide.offsetLeft + 'px';
+    nextButton.style.left = (activeSlide.offsetLeft + activeSlide.offsetWidth - 40) + 'px';
+  }
 }
 
   </script>
