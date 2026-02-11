@@ -10,7 +10,6 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Role;
-use TheHocineSaad\LaravelChargilyEPay\Traits\Epayable;
 use Spatie\Permission\Traits\HasRoles; // Add this line
 
 class User extends Authenticatable

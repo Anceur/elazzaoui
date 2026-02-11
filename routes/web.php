@@ -106,7 +106,3 @@ Route::post('/contact', [ContactController::class, 'sendContactMessage'])->name(
 
 
 
-
-// Route::post('chargilypay/redirect', [ChargilyPayController::class, "redirect"])->name("chargilypay.redirect");
-// Route::get('chargilypay/back', [ChargilyPayController::class, "back"])->name("chargilypay.back");
-// Route::post('chargilypay/webhook', [ChargilyPayController::class, "webhook"])->name("chargilypay.webhook_endpoint");
