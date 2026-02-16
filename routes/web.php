@@ -66,7 +66,7 @@ Route::middleware([
     // يمكن للمستخدمين المسجلين الدخول إلى الصفحة الشخصية أو لوحة القيادة
     Route::get('/homepage', function () {
         return view('home.homepage'); // يمكنك استبدالها بصفحة أخرى مثل الملف الشخصي
-    })->name('homepage');
+    })->name('dashboard');
 });
 
 

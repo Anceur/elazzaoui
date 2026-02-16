@@ -2,7 +2,7 @@ FROM php:8.2-cli
 
 WORKDIR /var/www
 
-# Install system dependencies + Node
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     git unzip curl libzip-dev nodejs npm \
     && docker-php-ext-install zip
@@ -21,11 +21,6 @@ RUN npm install
 
 # Build Vite assets
 RUN npm run build
-
-# Clear & cache config for production
-RUN php artisan config:clear
-RUN php artisan config:cache
-RUN php artisan view:cache
 
 EXPOSE 10000
 
