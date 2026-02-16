@@ -94,7 +94,7 @@
 
 
   <nav class="site-nav mb-5">
-   
+
 
     <div class="sticky-nav js-sticky-header">
       <div class="container position-relative">
@@ -115,12 +115,7 @@
             </li>
 
 
-            <li>
-              <a href="{{ url('/news') }}">
-                <span class="icon-subject"></span>
-                إختبار المستوى
-              </a>
-            </li>
+
             <li>
               <a href="{{ url('/about') }}">
                 <span class="icon-queue"></span>
@@ -135,33 +130,14 @@
                 اتصال بنا
               </a>
             </li>
-
-
-            @guest
-        <li>
-          <a href="{{ url('/login') }}">
-          <span class="icon-lock"></span>
-           الدخول
-          </a>
-        </li>
-
-
-        <li>
-          <a href="{{ url('/register') }}">
-          <span class="icon-person"></span>
-          تسجيل
-          </a>
-        </li>
-      @endguest
-            <!-- Settings Dropdown -->
           </ul>
 
 
           <div class="float-right d-inline-block">
             <!-- Show the navigation menu if the user is logged in -->
             @auth
-        @livewire('navigation-menu')
-      @endauth
+              @livewire('navigation-menu')
+            @endauth
           </div>
           {{-- <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">English , fr , arabic</a> --}}
           <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
@@ -185,17 +161,21 @@
           <div class="col-md pr-md-5 mb-4 mb-md-0">
             <h3 class="footer-heading text-center">معلومات عنا</h3>
             <ul class="list-unstyled quick-info mb-4">
-              <li><a href="tel:+21346307174" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 46 30 71 74</a></li>
-              <li><a href="tel:+213660979856" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 660 979 856</a></li>
-              <li><a href="tel:+213660979865" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +213 660 979 865</a></li>
-              <li><a href="mailto:contact@elazzaoui-school.com" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
+              <li><a href="tel:+21346307174" class="d-flex align-items-center"><span
+                    class="icon mr-3 icon-phone"></span> +213 46 30 71 74</a></li>
+              <li><a href="tel:+213660979856" class="d-flex align-items-center"><span
+                    class="icon mr-3 icon-phone"></span> +213 660 979 856</a></li>
+              <li><a href="tel:+213660979865" class="d-flex align-items-center"><span
+                    class="icon mr-3 icon-phone"></span> +213 660 979 865</a></li>
+              <li><a href="mailto:contact@elazzaoui-school.com" class="d-flex align-items-center"><span
+                    class="icon mr-3 icon-envelope"></span> contact@elazzaoui-school.com</a></li>
             </ul>
             <form action="#" class="subscribe">
               <input type="text" class="form-control" placeholder="أدخل بريدك الإلكتروني">
               <input type="submit" class="btn btn-submit" value="إرسال">
             </form>
           </div>
-  
+
           <!-- Social Media Section -->
           <div class="col-md mb-4 mb-md-0 text-center">
             <h3 class="footer-heading">مواقع التواصل الاجتماعي</h3>
@@ -204,30 +184,34 @@
                 <div class="social-icon-circle">
                   <a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
-                <div class="mr-2"><a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">تابعنا على تيك توك</a></div>
+                <div class="mr-2"><a href="https://www.tiktok.com/@el_azzaoui_school" target="_blank">تابعنا على تيك
+                    توك</a></div>
               </li>
               <li class="d-flex justify-content-center align-items-center">
                 <div class="social-icon-circle">
-                  <a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank"><span class="icon icon-facebook text-primary"></span></a>
+                  <a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank"><span
+                      class="icon icon-facebook text-primary"></span></a>
                 </div>
-                <div><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank">تابعنا على فيسبوك</a></div>
+                <div><a href="https://www.facebook.com/share/18mNrmTdyU/?mibextid=wwXIfr" target="_blank">تابعنا على
+                    فيسبوك</a></div>
               </li>
               <li class="d-flex justify-content-center align-items-center">
                 <div class="social-icon-circle">
-                  <a href="https://www.instagram.com/el_azzaoui_school" target="_blank"><span class="icon icon-instagram text-danger"></span></a>
+                  <a href="https://www.instagram.com/el_azzaoui_school" target="_blank"><span
+                      class="icon icon-instagram text-danger"></span></a>
                 </div>
                 <div><a href="https://www.instagram.com/el_azzaoui_school" target="_blank">تابعنا على إنستغرام</a></div>
               </li>
             </ul>
           </div>
 
-  
+
           <!-- Location Section -->
           <div class="col-md-3 mb-4 mb-md-0">
             <h3 class="footer-heading text-center">الموقع الجغرافي</h3>
             <img src="{{ asset('images/map.png') }}" alt="Location Map" class="img-fluid" loading="lazy">
           </div>
-  
+
           <!-- Footer Menu Section -->
           <div class="col-12">
             <div class="py-5 footer-menu-wrap d-md-flex align-items-center justify-content-space-between">
@@ -244,12 +228,12 @@
               </div>
             </div>
           </div>
-  
+
         </div>
       </div>
     </div>
   </footer>
-  
+
 
   <div id="overlayer"></div>
   <div class="loader">
