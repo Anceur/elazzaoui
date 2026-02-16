@@ -2,10 +2,10 @@ FROM php:8.2-cli
 
 WORKDIR /var/www
 
-# Install system dependencies
+# Install system dependencies + Node
 RUN apt-get update && apt-get install -y \
     git unzip curl libzip-dev nodejs npm \
-    && docker-php-ext-install pdo pdo_mysql zip
+    && docker-php-ext-install zip
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -21,6 +21,12 @@ RUN npm install
 
 # Build Vite assets
 RUN npm run build
+
+# Clear & cache config for production
+RUN php artisan config:clear
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
 
 EXPOSE 10000
 
