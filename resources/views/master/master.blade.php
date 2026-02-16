@@ -217,11 +217,9 @@
             <div class="py-5 footer-menu-wrap d-md-flex align-items-center justify-content-space-between">
               <ul class="list-unstyled footer-menu">
                 <li><a href="{{ url('/') }}">الصفحة الرئيسية</a></li>
-                <li><a href="{{ url('/news') }}">إختبار المستوى</a></li>
                 <li><a href="{{ url('/about') }}">الخدمات</a></li>
                 <li><a href="{{ url('/contact') }}">اتصال بنا</a></li>
-                <li><a href="{{ url('/login') }}">الدخول</a></li>
-                <li><a href="{{ url('/register') }}">تسجيل</a></li>
+
               </ul>
               <div class="site-logo-wrap">
                 <a href="#"><img src="./images/logo1.png" class="site-logo"></a>
